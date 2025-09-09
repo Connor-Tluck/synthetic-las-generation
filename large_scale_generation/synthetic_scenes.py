@@ -13,6 +13,10 @@ from typing import Dict, List, Tuple, Optional, Any
 import json
 
 # Import the existing scene generation functions
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from generate_point_cloud_sandbox import (
     make_grid, jitter, clipped_intensity, color_arrays_for, stack_fields,
     translate, ensure_cls, attach_rgb, make_plane, make_box, make_cylinder,

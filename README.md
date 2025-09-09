@@ -280,6 +280,9 @@ The project includes a professional large-scale generation system for creating r
 
 ### Quick Examples
 ```bash
+# Navigate to the large-scale generation folder
+cd large_scale_generation
+
 # Generate a residential street
 python generate_large_scale_scenes.py --config residential_street
 
@@ -292,26 +295,30 @@ python generate_large_scale_scenes.py --custom-config configs/my_scene.json
 
 ### Documentation
 For detailed information about the large-scale generation system, see:
-- [Large-Scale Generation Documentation](docs/LARGE_SCALE_GENERATION.md)
-- [Sample Configuration](configs/sample_custom_scene.json)
+- [Large-Scale Generation Documentation](large_scale_generation/docs/LARGE_SCALE_GENERATION.md)
+- [Sample Configuration](large_scale_generation/configs/sample_custom_scene.json)
 
 ## Project Structure
 
 ```
 synthetic-las-generation/
 ├── generate_point_cloud_sandbox.py    # Core generation system
-├── generate_large_scale_scenes.py     # Large-scale generation system
-├── demo_scene.py                      # 3D viewer
-├── synthetic_scenes.py                # Scene generation module
-├── scene_config.py                    # Configuration management
-├── scene_composer.py                  # Scene composition engine
-├── configs/                           # Configuration files
-│   └── sample_custom_scene.json
-├── docs/                              # Documentation
-│   └── LARGE_SCALE_GENERATION.md
-├── images/                            # Project images
 ├── pointcloud_sandbox_output/         # Core system output
-└── large_scale_output/                # Large-scale system output
+├── images/                            # Project images
+├── requirements.txt                   # Dependencies
+├── README.md                          # This file
+└── large_scale_generation/            # Large-scale generation system
+    ├── generate_large_scale_scenes.py # Main large-scale interface
+    ├── synthetic_scenes.py            # Scene generation module
+    ├── scene_config.py                # Configuration management
+    ├── scene_composer.py              # Scene composition engine
+    ├── configs/                       # Configuration files
+    │   ├── sample_custom_scene.json
+    │   └── small_test_scene.json
+    ├── docs/                          # Documentation
+    │   └── LARGE_SCALE_GENERATION.md
+    ├── README.md                      # Large-scale system docs
+    └── large_scale_output/            # Large-scale system output
 ```
 
 ## Contact

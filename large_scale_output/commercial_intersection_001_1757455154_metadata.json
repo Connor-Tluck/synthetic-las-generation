@@ -1,0 +1,81 @@
+{
+  "generation_info": {
+    "timestamp": 1757455154.5475507,
+    "generator_version": "1.0.0",
+    "config_name": "Commercial Intersection",
+    "config_description": "Busy commercial intersection with crosswalks, traffic control, and utilities",
+    "complexity": "detailed"
+  },
+  "scene_info": {
+    "output_file": "commercial_intersection_001_1757455154.laz",
+    "point_count": 1906586,
+    "bounds": {
+      "min_x": -6.0,
+      "max_x": 85.95,
+      "min_y": 0.0,
+      "max_y": 128.25,
+      "min_z": -0.4,
+      "max_z": 9.0
+    },
+    "dimensions": {
+      "width": 91.95,
+      "length": 128.25,
+      "height": 9.4
+    },
+    "point_density_per_sqm": 161.67664645269753,
+    "has_rgb": true,
+    "format": "LAZ"
+  },
+  "features": {
+    "enabled_features": {
+      "street_patch": 2,
+      "crosswalk": 4,
+      "sidewalk": 4,
+      "curb_with_road": 4,
+      "stop_sign": 4,
+      "streetlight": 8,
+      "power_pole_wires": 6,
+      "utility_cabinet": 3,
+      "manholes": 8,
+      "bollards": 12
+    },
+    "total_feature_count": 55,
+    "feature_types": 10
+  },
+  "classification_summary": {
+    "unique_classes": [
+      1,
+      2,
+      14,
+      23,
+      24,
+      26
+    ],
+    "class_counts": {
+      "1": 72366,
+      "2": 384000,
+      "14": 3996,
+      "23": 1331200,
+      "24": 44800,
+      "26": 70224
+    }
+  },
+  "configuration": {
+    "scene_size": {
+      "width": 80.0,
+      "length": 80.0,
+      "height": 20.0
+    },
+    "composition_rules": {
+      "intersection_center": true,
+      "traffic_control": true,
+      "utility_underground": true,
+      "pedestrian_safety": true
+    },
+    "output_settings": {
+      "format": "laz",
+      "compression": true,
+      "include_metadata": true
+    }
+  }
+}

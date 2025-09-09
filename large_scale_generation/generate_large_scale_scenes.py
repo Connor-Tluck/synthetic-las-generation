@@ -27,6 +27,10 @@ from typing import Dict, List, Optional, Any
 import numpy as np
 
 # Import our modular components
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from synthetic_scenes import SceneGenerator
 from scene_config import SceneConfigurationManager, SceneConfig, SceneComplexity
 from scene_composer import SceneComposer

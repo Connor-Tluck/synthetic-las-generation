@@ -1,0 +1,69 @@
+{
+  "generation_info": {
+    "timestamp": 1757455116.315125,
+    "generator_version": "1.0.0",
+    "config_name": "Small Test Scene",
+    "config_description": "A small test scene for quick generation and testing",
+    "complexity": "basic"
+  },
+  "scene_info": {
+    "output_file": "small_test_scene_001_1757455116.laz",
+    "point_count": 128478,
+    "bounds": {
+      "min_x": -9.0,
+      "max_x": 28.950000000000003,
+      "min_y": 0.0,
+      "max_y": 46.64186340305889,
+      "min_z": -0.15,
+      "max_z": 7.5
+    },
+    "dimensions": {
+      "width": 37.95,
+      "length": 46.64186340305889,
+      "height": 7.65
+    },
+    "point_density_per_sqm": 72.58403285046538,
+    "has_rgb": true,
+    "format": "LAZ"
+  },
+  "features": {
+    "enabled_features": {
+      "street_patch": 1,
+      "sidewalk": 2,
+      "tree": 6,
+      "streetlight": 3
+    },
+    "total_feature_count": 12,
+    "feature_types": 4
+  },
+  "classification_summary": {
+    "unique_classes": [
+      1,
+      2,
+      5,
+      23
+    ],
+    "class_counts": {
+      "1": 8118,
+      "2": 36000,
+      "5": 12360,
+      "23": 72000
+    }
+  },
+  "configuration": {
+    "scene_size": {
+      "width": 20.0,
+      "length": 30.0,
+      "height": 10.0
+    },
+    "composition_rules": {
+      "road_center": true,
+      "sidewalk_symmetry": true
+    },
+    "output_settings": {
+      "format": "laz",
+      "compression": true,
+      "include_metadata": true
+    }
+  }
+}
