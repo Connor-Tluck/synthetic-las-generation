@@ -1,0 +1,1468 @@
+{
+  "generation_info": {
+    "timestamp": 1757461021,
+    "generator": "density_test_grid",
+    "version": "1.0.0"
+  },
+  "grid_config": {
+    "features": 21,
+    "density_levels": [
+      50,
+      100,
+      400,
+      1000,
+      5000
+    ],
+    "feature_size": 8.0,
+    "grid_spacing": 20.0,
+    "label_height": 2.0
+  },
+  "scene_info": {
+    "total_points": 1779314,
+    "output_file": "density_test_grid_1757461021.laz",
+    "has_rgb": true,
+    "format": "LAZ"
+  },
+  "grid_data": [
+    {
+      "row": 0,
+      "col": 0,
+      "feature_name": "street_patch",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "point_count": 25664
+    },
+    {
+      "row": 0,
+      "col": 1,
+      "feature_name": "street_patch",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "point_count": 25694
+    },
+    {
+      "row": 0,
+      "col": 2,
+      "feature_name": "street_patch",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "point_count": 26040
+    },
+    {
+      "row": 0,
+      "col": 3,
+      "feature_name": "street_patch",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "point_count": 26782
+    },
+    {
+      "row": 0,
+      "col": 4,
+      "feature_name": "street_patch",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "point_count": 31830
+    },
+    {
+      "row": 1,
+      "col": 0,
+      "feature_name": "crosswalk",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 20.0,
+        "z": 0.0
+      },
+      "point_count": 19264
+    },
+    {
+      "row": 1,
+      "col": 1,
+      "feature_name": "crosswalk",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 20.0,
+        "z": 0.0
+      },
+      "point_count": 19294
+    },
+    {
+      "row": 1,
+      "col": 2,
+      "feature_name": "crosswalk",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 20.0,
+        "z": 0.0
+      },
+      "point_count": 19640
+    },
+    {
+      "row": 1,
+      "col": 3,
+      "feature_name": "crosswalk",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 20.0,
+        "z": 0.0
+      },
+      "point_count": 20382
+    },
+    {
+      "row": 1,
+      "col": 4,
+      "feature_name": "crosswalk",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 20.0,
+        "z": 0.0
+      },
+      "point_count": 25430
+    },
+    {
+      "row": 2,
+      "col": 0,
+      "feature_name": "curb_with_road",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 40.0,
+        "z": 0.0
+      },
+      "point_count": 12384
+    },
+    {
+      "row": 2,
+      "col": 1,
+      "feature_name": "curb_with_road",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 40.0,
+        "z": 0.0
+      },
+      "point_count": 12414
+    },
+    {
+      "row": 2,
+      "col": 2,
+      "feature_name": "curb_with_road",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 40.0,
+        "z": 0.0
+      },
+      "point_count": 12760
+    },
+    {
+      "row": 2,
+      "col": 3,
+      "feature_name": "curb_with_road",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 40.0,
+        "z": 0.0
+      },
+      "point_count": 13502
+    },
+    {
+      "row": 2,
+      "col": 4,
+      "feature_name": "curb_with_road",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 40.0,
+        "z": 0.0
+      },
+      "point_count": 18550
+    },
+    {
+      "row": 3,
+      "col": 0,
+      "feature_name": "sidewalk",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 60.0,
+        "z": 0.0
+      },
+      "point_count": 9664
+    },
+    {
+      "row": 3,
+      "col": 1,
+      "feature_name": "sidewalk",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 60.0,
+        "z": 0.0
+      },
+      "point_count": 9694
+    },
+    {
+      "row": 3,
+      "col": 2,
+      "feature_name": "sidewalk",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 60.0,
+        "z": 0.0
+      },
+      "point_count": 10040
+    },
+    {
+      "row": 3,
+      "col": 3,
+      "feature_name": "sidewalk",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 60.0,
+        "z": 0.0
+      },
+      "point_count": 10782
+    },
+    {
+      "row": 3,
+      "col": 4,
+      "feature_name": "sidewalk",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 60.0,
+        "z": 0.0
+      },
+      "point_count": 15830
+    },
+    {
+      "row": 4,
+      "col": 0,
+      "feature_name": "jersey_barrier",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 80.0,
+        "z": 0.0
+      },
+      "point_count": 7584
+    },
+    {
+      "row": 4,
+      "col": 1,
+      "feature_name": "jersey_barrier",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 80.0,
+        "z": 0.0
+      },
+      "point_count": 7614
+    },
+    {
+      "row": 4,
+      "col": 2,
+      "feature_name": "jersey_barrier",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 80.0,
+        "z": 0.0
+      },
+      "point_count": 7960
+    },
+    {
+      "row": 4,
+      "col": 3,
+      "feature_name": "jersey_barrier",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 80.0,
+        "z": 0.0
+      },
+      "point_count": 8702
+    },
+    {
+      "row": 4,
+      "col": 4,
+      "feature_name": "jersey_barrier",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 80.0,
+        "z": 0.0
+      },
+      "point_count": 13750
+    },
+    {
+      "row": 5,
+      "col": 0,
+      "feature_name": "guardrail",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 100.0,
+        "z": 0.0
+      },
+      "point_count": 5564
+    },
+    {
+      "row": 5,
+      "col": 1,
+      "feature_name": "guardrail",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 100.0,
+        "z": 0.0
+      },
+      "point_count": 5594
+    },
+    {
+      "row": 5,
+      "col": 2,
+      "feature_name": "guardrail",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 100.0,
+        "z": 0.0
+      },
+      "point_count": 5940
+    },
+    {
+      "row": 5,
+      "col": 3,
+      "feature_name": "guardrail",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 100.0,
+        "z": 0.0
+      },
+      "point_count": 6682
+    },
+    {
+      "row": 5,
+      "col": 4,
+      "feature_name": "guardrail",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 100.0,
+        "z": 0.0
+      },
+      "point_count": 11730
+    },
+    {
+      "row": 6,
+      "col": 0,
+      "feature_name": "bollard",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 120.0,
+        "z": 0.0
+      },
+      "point_count": 304
+    },
+    {
+      "row": 6,
+      "col": 1,
+      "feature_name": "bollard",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 120.0,
+        "z": 0.0
+      },
+      "point_count": 334
+    },
+    {
+      "row": 6,
+      "col": 2,
+      "feature_name": "bollard",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 120.0,
+        "z": 0.0
+      },
+      "point_count": 680
+    },
+    {
+      "row": 6,
+      "col": 3,
+      "feature_name": "bollard",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 120.0,
+        "z": 0.0
+      },
+      "point_count": 1422
+    },
+    {
+      "row": 6,
+      "col": 4,
+      "feature_name": "bollard",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 120.0,
+        "z": 0.0
+      },
+      "point_count": 6470
+    },
+    {
+      "row": 7,
+      "col": 0,
+      "feature_name": "power_pole",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 140.0,
+        "z": 0.0
+      },
+      "point_count": 4564
+    },
+    {
+      "row": 7,
+      "col": 1,
+      "feature_name": "power_pole",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 140.0,
+        "z": 0.0
+      },
+      "point_count": 4594
+    },
+    {
+      "row": 7,
+      "col": 2,
+      "feature_name": "power_pole",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 140.0,
+        "z": 0.0
+      },
+      "point_count": 4940
+    },
+    {
+      "row": 7,
+      "col": 3,
+      "feature_name": "power_pole",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 140.0,
+        "z": 0.0
+      },
+      "point_count": 5682
+    },
+    {
+      "row": 7,
+      "col": 4,
+      "feature_name": "power_pole",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 140.0,
+        "z": 0.0
+      },
+      "point_count": 10730
+    },
+    {
+      "row": 8,
+      "col": 0,
+      "feature_name": "streetlight",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 160.0,
+        "z": 0.0
+      },
+      "point_count": 2770
+    },
+    {
+      "row": 8,
+      "col": 1,
+      "feature_name": "streetlight",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 160.0,
+        "z": 0.0
+      },
+      "point_count": 2800
+    },
+    {
+      "row": 8,
+      "col": 2,
+      "feature_name": "streetlight",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 160.0,
+        "z": 0.0
+      },
+      "point_count": 3146
+    },
+    {
+      "row": 8,
+      "col": 3,
+      "feature_name": "streetlight",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 160.0,
+        "z": 0.0
+      },
+      "point_count": 3888
+    },
+    {
+      "row": 8,
+      "col": 4,
+      "feature_name": "streetlight",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 160.0,
+        "z": 0.0
+      },
+      "point_count": 8936
+    },
+    {
+      "row": 9,
+      "col": 0,
+      "feature_name": "utility_cabinet",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 180.0,
+        "z": 0.0
+      },
+      "point_count": 2610
+    },
+    {
+      "row": 9,
+      "col": 1,
+      "feature_name": "utility_cabinet",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 180.0,
+        "z": 0.0
+      },
+      "point_count": 2640
+    },
+    {
+      "row": 9,
+      "col": 2,
+      "feature_name": "utility_cabinet",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 180.0,
+        "z": 0.0
+      },
+      "point_count": 2986
+    },
+    {
+      "row": 9,
+      "col": 3,
+      "feature_name": "utility_cabinet",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 180.0,
+        "z": 0.0
+      },
+      "point_count": 3728
+    },
+    {
+      "row": 9,
+      "col": 4,
+      "feature_name": "utility_cabinet",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 180.0,
+        "z": 0.0
+      },
+      "point_count": 8776
+    },
+    {
+      "row": 10,
+      "col": 0,
+      "feature_name": "phone_cabinet",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 200.0,
+        "z": 0.0
+      },
+      "point_count": 1936
+    },
+    {
+      "row": 10,
+      "col": 1,
+      "feature_name": "phone_cabinet",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 200.0,
+        "z": 0.0
+      },
+      "point_count": 1966
+    },
+    {
+      "row": 10,
+      "col": 2,
+      "feature_name": "phone_cabinet",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 200.0,
+        "z": 0.0
+      },
+      "point_count": 2312
+    },
+    {
+      "row": 10,
+      "col": 3,
+      "feature_name": "phone_cabinet",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 200.0,
+        "z": 0.0
+      },
+      "point_count": 3054
+    },
+    {
+      "row": 10,
+      "col": 4,
+      "feature_name": "phone_cabinet",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 200.0,
+        "z": 0.0
+      },
+      "point_count": 8102
+    },
+    {
+      "row": 11,
+      "col": 0,
+      "feature_name": "manhole",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 220.0,
+        "z": 0.0
+      },
+      "point_count": 164
+    },
+    {
+      "row": 11,
+      "col": 1,
+      "feature_name": "manhole",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 220.0,
+        "z": 0.0
+      },
+      "point_count": 194
+    },
+    {
+      "row": 11,
+      "col": 2,
+      "feature_name": "manhole",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 220.0,
+        "z": 0.0
+      },
+      "point_count": 540
+    },
+    {
+      "row": 11,
+      "col": 3,
+      "feature_name": "manhole",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 220.0,
+        "z": 0.0
+      },
+      "point_count": 1282
+    },
+    {
+      "row": 11,
+      "col": 4,
+      "feature_name": "manhole",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 220.0,
+        "z": 0.0
+      },
+      "point_count": 6330
+    },
+    {
+      "row": 12,
+      "col": 0,
+      "feature_name": "storm_inlet_grate",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 240.0,
+        "z": 0.0
+      },
+      "point_count": 1010
+    },
+    {
+      "row": 12,
+      "col": 1,
+      "feature_name": "storm_inlet_grate",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 240.0,
+        "z": 0.0
+      },
+      "point_count": 1040
+    },
+    {
+      "row": 12,
+      "col": 2,
+      "feature_name": "storm_inlet_grate",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 240.0,
+        "z": 0.0
+      },
+      "point_count": 1386
+    },
+    {
+      "row": 12,
+      "col": 3,
+      "feature_name": "storm_inlet_grate",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 240.0,
+        "z": 0.0
+      },
+      "point_count": 2128
+    },
+    {
+      "row": 12,
+      "col": 4,
+      "feature_name": "storm_inlet_grate",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 240.0,
+        "z": 0.0
+      },
+      "point_count": 7176
+    },
+    {
+      "row": 13,
+      "col": 0,
+      "feature_name": "stop_sign",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 260.0,
+        "z": 0.0
+      },
+      "point_count": 1240
+    },
+    {
+      "row": 13,
+      "col": 1,
+      "feature_name": "stop_sign",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 260.0,
+        "z": 0.0
+      },
+      "point_count": 1270
+    },
+    {
+      "row": 13,
+      "col": 2,
+      "feature_name": "stop_sign",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 260.0,
+        "z": 0.0
+      },
+      "point_count": 1616
+    },
+    {
+      "row": 13,
+      "col": 3,
+      "feature_name": "stop_sign",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 260.0,
+        "z": 0.0
+      },
+      "point_count": 2358
+    },
+    {
+      "row": 13,
+      "col": 4,
+      "feature_name": "stop_sign",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 260.0,
+        "z": 0.0
+      },
+      "point_count": 7406
+    },
+    {
+      "row": 14,
+      "col": 0,
+      "feature_name": "parking_bumper",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 280.0,
+        "z": 0.0
+      },
+      "point_count": 512
+    },
+    {
+      "row": 14,
+      "col": 1,
+      "feature_name": "parking_bumper",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 280.0,
+        "z": 0.0
+      },
+      "point_count": 542
+    },
+    {
+      "row": 14,
+      "col": 2,
+      "feature_name": "parking_bumper",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 280.0,
+        "z": 0.0
+      },
+      "point_count": 888
+    },
+    {
+      "row": 14,
+      "col": 3,
+      "feature_name": "parking_bumper",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 280.0,
+        "z": 0.0
+      },
+      "point_count": 1630
+    },
+    {
+      "row": 14,
+      "col": 4,
+      "feature_name": "parking_bumper",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 280.0,
+        "z": 0.0
+      },
+      "point_count": 6678
+    },
+    {
+      "row": 15,
+      "col": 0,
+      "feature_name": "speed_hump",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 300.0,
+        "z": 0.0
+      },
+      "point_count": 19264
+    },
+    {
+      "row": 15,
+      "col": 1,
+      "feature_name": "speed_hump",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 300.0,
+        "z": 0.0
+      },
+      "point_count": 19294
+    },
+    {
+      "row": 15,
+      "col": 2,
+      "feature_name": "speed_hump",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 300.0,
+        "z": 0.0
+      },
+      "point_count": 19640
+    },
+    {
+      "row": 15,
+      "col": 3,
+      "feature_name": "speed_hump",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 300.0,
+        "z": 0.0
+      },
+      "point_count": 20382
+    },
+    {
+      "row": 15,
+      "col": 4,
+      "feature_name": "speed_hump",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 300.0,
+        "z": 0.0
+      },
+      "point_count": 25430
+    },
+    {
+      "row": 16,
+      "col": 0,
+      "feature_name": "tree",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 320.0,
+        "z": 0.0
+      },
+      "point_count": 2124
+    },
+    {
+      "row": 16,
+      "col": 1,
+      "feature_name": "tree",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 320.0,
+        "z": 0.0
+      },
+      "point_count": 2154
+    },
+    {
+      "row": 16,
+      "col": 2,
+      "feature_name": "tree",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 320.0,
+        "z": 0.0
+      },
+      "point_count": 2500
+    },
+    {
+      "row": 16,
+      "col": 3,
+      "feature_name": "tree",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 320.0,
+        "z": 0.0
+      },
+      "point_count": 3242
+    },
+    {
+      "row": 16,
+      "col": 4,
+      "feature_name": "tree",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 320.0,
+        "z": 0.0
+      },
+      "point_count": 8290
+    },
+    {
+      "row": 17,
+      "col": 0,
+      "feature_name": "bench",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 340.0,
+        "z": 0.0
+      },
+      "point_count": 1026
+    },
+    {
+      "row": 17,
+      "col": 1,
+      "feature_name": "bench",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 340.0,
+        "z": 0.0
+      },
+      "point_count": 1056
+    },
+    {
+      "row": 17,
+      "col": 2,
+      "feature_name": "bench",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 340.0,
+        "z": 0.0
+      },
+      "point_count": 1402
+    },
+    {
+      "row": 17,
+      "col": 3,
+      "feature_name": "bench",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 340.0,
+        "z": 0.0
+      },
+      "point_count": 2144
+    },
+    {
+      "row": 17,
+      "col": 4,
+      "feature_name": "bench",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 340.0,
+        "z": 0.0
+      },
+      "point_count": 7192
+    },
+    {
+      "row": 18,
+      "col": 0,
+      "feature_name": "trash_can",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 360.0,
+        "z": 0.0
+      },
+      "point_count": 768
+    },
+    {
+      "row": 18,
+      "col": 1,
+      "feature_name": "trash_can",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 360.0,
+        "z": 0.0
+      },
+      "point_count": 798
+    },
+    {
+      "row": 18,
+      "col": 2,
+      "feature_name": "trash_can",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 360.0,
+        "z": 0.0
+      },
+      "point_count": 1144
+    },
+    {
+      "row": 18,
+      "col": 3,
+      "feature_name": "trash_can",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 360.0,
+        "z": 0.0
+      },
+      "point_count": 1886
+    },
+    {
+      "row": 18,
+      "col": 4,
+      "feature_name": "trash_can",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 360.0,
+        "z": 0.0
+      },
+      "point_count": 6934
+    },
+    {
+      "row": 19,
+      "col": 0,
+      "feature_name": "bike_rack_u",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 380.0,
+        "z": 0.0
+      },
+      "point_count": 519
+    },
+    {
+      "row": 19,
+      "col": 1,
+      "feature_name": "bike_rack_u",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 380.0,
+        "z": 0.0
+      },
+      "point_count": 549
+    },
+    {
+      "row": 19,
+      "col": 2,
+      "feature_name": "bike_rack_u",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 380.0,
+        "z": 0.0
+      },
+      "point_count": 895
+    },
+    {
+      "row": 19,
+      "col": 3,
+      "feature_name": "bike_rack_u",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 380.0,
+        "z": 0.0
+      },
+      "point_count": 1637
+    },
+    {
+      "row": 19,
+      "col": 4,
+      "feature_name": "bike_rack_u",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 380.0,
+        "z": 0.0
+      },
+      "point_count": 6685
+    },
+    {
+      "row": 20,
+      "col": 0,
+      "feature_name": "picnic_table",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 400.0,
+        "z": 0.0
+      },
+      "point_count": 3304
+    },
+    {
+      "row": 20,
+      "col": 1,
+      "feature_name": "picnic_table",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 400.0,
+        "z": 0.0
+      },
+      "point_count": 3334
+    },
+    {
+      "row": 20,
+      "col": 2,
+      "feature_name": "picnic_table",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 400.0,
+        "z": 0.0
+      },
+      "point_count": 3680
+    },
+    {
+      "row": 20,
+      "col": 3,
+      "feature_name": "picnic_table",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 400.0,
+        "z": 0.0
+      },
+      "point_count": 4422
+    },
+    {
+      "row": 20,
+      "col": 4,
+      "feature_name": "picnic_table",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 400.0,
+        "z": 0.0
+      },
+      "point_count": 9470
+    },
+    {
+      "row": 21,
+      "col": 0,
+      "feature_name": "stairs",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 420.0,
+        "z": 0.0
+      },
+      "point_count": 3109
+    },
+    {
+      "row": 22,
+      "col": 0,
+      "feature_name": "stairs",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 440.0,
+        "z": 0.0
+      },
+      "point_count": 3109
+    },
+    {
+      "row": 21,
+      "col": 1,
+      "feature_name": "stairs",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 420.0,
+        "z": 0.0
+      },
+      "point_count": 6244
+    },
+    {
+      "row": 22,
+      "col": 1,
+      "feature_name": "stairs",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 440.0,
+        "z": 0.0
+      },
+      "point_count": 6244
+    },
+    {
+      "row": 21,
+      "col": 2,
+      "feature_name": "stairs",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 420.0,
+        "z": 0.0
+      },
+      "point_count": 25040
+    },
+    {
+      "row": 22,
+      "col": 2,
+      "feature_name": "stairs",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 440.0,
+        "z": 0.0
+      },
+      "point_count": 25040
+    },
+    {
+      "row": 21,
+      "col": 3,
+      "feature_name": "stairs",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 420.0,
+        "z": 0.0
+      },
+      "point_count": 62282
+    },
+    {
+      "row": 22,
+      "col": 3,
+      "feature_name": "stairs",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 440.0,
+        "z": 0.0
+      },
+      "point_count": 62282
+    },
+    {
+      "row": 21,
+      "col": 4,
+      "feature_name": "stairs",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 420.0,
+        "z": 0.0
+      },
+      "point_count": 315750
+    },
+    {
+      "row": 22,
+      "col": 4,
+      "feature_name": "stairs",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 440.0,
+        "z": 0.0
+      },
+      "point_count": 315750
+    },
+    {
+      "row": 23,
+      "col": 0,
+      "feature_name": "density_label",
+      "density": 50,
+      "position": {
+        "x": 0.0,
+        "y": 460.0,
+        "z": 1.0
+      },
+      "point_count": 700
+    },
+    {
+      "row": 23,
+      "col": 1,
+      "feature_name": "density_label",
+      "density": 100,
+      "position": {
+        "x": 20.0,
+        "y": 460.0,
+        "z": 1.0
+      },
+      "point_count": 1500
+    },
+    {
+      "row": 23,
+      "col": 2,
+      "feature_name": "density_label",
+      "density": 400,
+      "position": {
+        "x": 40.0,
+        "y": 460.0,
+        "z": 1.0
+      },
+      "point_count": 7665
+    },
+    {
+      "row": 23,
+      "col": 3,
+      "feature_name": "density_label",
+      "density": 1000,
+      "position": {
+        "x": 60.0,
+        "y": 460.0,
+        "z": 1.0
+      },
+      "point_count": 23100
+    },
+    {
+      "row": 23,
+      "col": 4,
+      "feature_name": "density_label",
+      "density": 5000,
+      "position": {
+        "x": 80.0,
+        "y": 460.0,
+        "z": 1.0
+      },
+      "point_count": 148814
+    }
+  ]
+}

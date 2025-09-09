@@ -202,7 +202,7 @@ def make_box(l, w, h, base_z, mat_key, cls, spacing=BASE_SPACING):
         gy = jitter(gy, XY_JITTER)
         gz = jitter(gz, XY_JITTER)
         x = np.full(gy.size, x0)
-        y = gz
+        y = gz - w/2  # Center the side face
         z = base_z + gy
         mean, std = MAT_INT[mat_key]
         inten = clipped_intensity(mean, std, gy.size)
@@ -215,7 +215,7 @@ def make_box(l, w, h, base_z, mat_key, cls, spacing=BASE_SPACING):
         gx, gz = make_grid(nx, nz, spacing)
         gx = jitter(gx, XY_JITTER)
         gz = jitter(gz, XY_JITTER)
-        x = gx
+        x = gx - l/2  # Center the side face
         y = np.full(gx.size, y0)
         z = base_z + gz
         mean, std = MAT_INT[mat_key]
@@ -223,10 +223,10 @@ def make_box(l, w, h, base_z, mat_key, cls, spacing=BASE_SPACING):
         d = {"x": x, "y": y, "z": z, "intensity": inten, "class": np.full(x.size, CLASS[cls], dtype=np.uint8)}
         return attach_rgb(d, mat_key)
 
-    faces.append(side_x(0.0))
-    faces.append(side_x(l))
-    faces.append(side_y(0.0))
-    faces.append(side_y(w))
+    faces.append(side_x(-l/2))
+    faces.append(side_x(l/2))
+    faces.append(side_y(-w/2))
+    faces.append(side_y(w/2))
     return stack_fields(faces)
 
 def make_cylinder(radius, height, base_z, mat_key, cls, spacing=BASE_SPACING):
