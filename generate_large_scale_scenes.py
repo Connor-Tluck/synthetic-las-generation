@@ -290,12 +290,21 @@ class LargeScaleGenerator:
             pcd.colors = o3d.utility.Vector3dVector(colors)
             
             print("  Opening 3D preview...")
-            o3d.visualization.draw_geometries([pcd], window_name="Synthetic Scene Preview")
+            print("  Close the preview window to continue...")
             
-        except ImportError:
-            print("  Warning: Open3D not available for preview")
+            # Use the same visualization as the original demo_scene.py
+            o3d.visualization.draw_geometries([pcd], 
+                                            window_name="Synthetic Scene Preview",
+                                            width=1024, 
+                                            height=768)
+            
+        except ImportError as e:
+            print(f"  Warning: Open3D not available for preview: {e}")
+            print("  Install Open3D with: pip install open3d")
         except Exception as e:
             print(f"  Warning: Could not open preview: {e}")
+            import traceback
+            traceback.print_exc()
     
     def list_available_configs(self):
         """List all available predefined configurations."""

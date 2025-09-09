@@ -1,0 +1,77 @@
+{
+  "generation_info": {
+    "timestamp": 1757454903.360702,
+    "generator_version": "1.0.0",
+    "config_name": "Residential Street",
+    "config_description": "Typical residential street with sidewalks, trees, and utilities",
+    "complexity": "standard"
+  },
+  "scene_info": {
+    "output_file": "residential_street_001_1757454902.laz",
+    "point_count": 868982,
+    "bounds": {
+      "min_x": 20.0,
+      "max_x": 129.95,
+      "min_y": 6.094297393707237,
+      "max_y": 166.91666666666669,
+      "min_z": 0.0,
+      "max_z": 7.5
+    },
+    "dimensions": {
+      "width": 109.94999999999999,
+      "length": 160.82236927295946,
+      "height": 7.5
+    },
+    "point_density_per_sqm": 49.143840294211024,
+    "has_rgb": true,
+    "format": "LAZ"
+  },
+  "features": {
+    "enabled_features": {
+      "street_patch": 1,
+      "sidewalk": 2,
+      "curb_with_road": 2,
+      "tree": 20,
+      "streetlight": 10,
+      "utility_cabinet": 2,
+      "fire_hydrant": 3,
+      "mailbox_cluster": 5
+    },
+    "total_feature_count": 45,
+    "feature_types": 8
+  },
+  "classification_summary": {
+    "unique_classes": [
+      1,
+      2,
+      5,
+      23,
+      24
+    ],
+    "class_counts": {
+      "1": 39782,
+      "2": 160000,
+      "5": 41200,
+      "23": 600000,
+      "24": 28000
+    }
+  },
+  "configuration": {
+    "scene_size": {
+      "width": 50.0,
+      "length": 100.0,
+      "height": 15.0
+    },
+    "composition_rules": {
+      "road_center": true,
+      "sidewalk_symmetry": true,
+      "utility_spacing": 20.0,
+      "vegetation_density": 0.8
+    },
+    "output_settings": {
+      "format": "laz",
+      "compression": true,
+      "include_metadata": true
+    }
+  }
+}

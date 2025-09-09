@@ -176,6 +176,11 @@ def make_plane(area_w, area_h, z0, mat_key, cls, spacing=BASE_SPACING, slope=(0.
     nx = max(1, int(area_w / spacing))
     ny = max(1, int(area_h / spacing))
     gx, gy = make_grid(nx, ny, spacing)
+    
+    # Center the plane at origin
+    gx = gx - area_w / 2
+    gy = gy - area_h / 2
+    
     gx = jitter(gx, XY_JITTER)
     gy = jitter(gy, XY_JITTER)
     z = z0 + slope[0] * gx + slope[1] * gy
