@@ -4,6 +4,8 @@ A Python toolkit for generating synthetic LiDAR point cloud data in LAS/LAZ form
 
 ![Synthetic LAS Generation](images/synthetic_las.jpg)
 
+![Density Test Grid](images/density_grid.jpg)
+
 ## Features
 
 ### Core Generation System
@@ -24,6 +26,15 @@ A Python toolkit for generating synthetic LiDAR point cloud data in LAS/LAZ form
 - **Realistic Placement**: Crosswalks at intersections, trees along roads, utilities with proper spacing
 - **Batch Generation**: Generate multiple scene variations efficiently
 - **Comprehensive Metadata**: Detailed scene information and statistics
+
+### Density Test Grid System
+- **CAD-Focused Objects**: 24 specialized objects for drawing functionality testing
+- **Multi-Density Testing**: 5 density levels (50, 100, 400, 1000, 5000 points/m²)
+- **Clean Geometries**: Well-defined, individual objects without artifacts
+- **Human-Readable Labels**: Numerical density labels for easy identification
+- **Staircase Examples**: Perfect for testing drape tools and line drawing
+- **Systematic Grid Layout**: Organized 24×5 grid for comprehensive testing
+- **CAD Tool Testing**: Designed for area measurements, angle detection, elevation analysis
 
 ## Generated Scenes
 
@@ -136,6 +147,21 @@ This will create:
 - A legend.json file with scene metadata
 - Optional 3D preview window
 
+### Density Test Grid
+
+Generate a comprehensive test grid for CAD drawing functionality:
+
+```bash
+python generate_density_test_grid.py
+```
+
+This will create:
+- A 24×5 grid of CAD-focused objects
+- 5 density levels: 50, 100, 400, 1000, 5000 points/m²
+- Human-readable numerical density labels
+- Enhanced 3D preview with zoom controls
+- Output: `density_test_grid_output/enhanced_density_test_grid.laz`
+
 ### Configuration Options
 
 Edit the configuration section in `generate_point_cloud_sandbox.py`:
@@ -175,6 +201,14 @@ large_scale_output/
 ├── residential_street_001_metadata.json
 ├── commercial_intersection_001.laz
 ├── commercial_intersection_001_metadata.json
+└── ...
+```
+
+### Density Test Grid System
+```
+density_test_grid_output/
+├── enhanced_density_test_grid.laz
+├── enhanced_grid_metadata.json
 └── ...
 ```
 
@@ -303,8 +337,12 @@ For detailed information about the large-scale generation system, see:
 ```
 synthetic-las-generation/
 ├── generate_point_cloud_sandbox.py    # Core generation system
+├── generate_density_test_grid.py      # Density test grid system
 ├── pointcloud_sandbox_output/         # Core system output
+├── density_test_grid_output/          # Density test grid output
 ├── images/                            # Project images
+│   ├── synthetic_las.jpg              # Main project image
+│   └── density_grid.jpg               # Density test grid image
 ├── requirements.txt                   # Dependencies
 ├── README.md                          # This file
 └── large_scale_generation/            # Large-scale generation system
