@@ -1,0 +1,212 @@
+[
+  {
+    "index": 1,
+    "name": "street_patch",
+    "origin_x": 0.0,
+    "origin_y": 0.0,
+    "approx_points": 32000
+  },
+  {
+    "index": 2,
+    "name": "crosswalk",
+    "origin_x": 12.0,
+    "origin_y": 0.0,
+    "approx_points": 38630
+  },
+  {
+    "index": 3,
+    "name": "curb_with_road",
+    "origin_x": 24.0,
+    "origin_y": 0.0,
+    "approx_points": 15400
+  },
+  {
+    "index": 4,
+    "name": "jersey_barrier",
+    "origin_x": 36.0,
+    "origin_y": 0.0,
+    "approx_points": 9400
+  },
+  {
+    "index": 5,
+    "name": "stairs",
+    "origin_x": 48.0,
+    "origin_y": 0.0,
+    "approx_points": 3360
+  },
+  {
+    "index": 6,
+    "name": "bench",
+    "origin_x": 0.0,
+    "origin_y": 12.0,
+    "approx_points": 962
+  },
+  {
+    "index": 7,
+    "name": "power_pole_wires",
+    "origin_x": 12.0,
+    "origin_y": 12.0,
+    "approx_points": 5494
+  },
+  {
+    "index": 8,
+    "name": "manholes",
+    "origin_x": 24.0,
+    "origin_y": 12.0,
+    "approx_points": 384
+  },
+  {
+    "index": 9,
+    "name": "barrier_and_curb",
+    "origin_x": 36.0,
+    "origin_y": 12.0,
+    "approx_points": 19840
+  },
+  {
+    "index": 10,
+    "name": "sidewalk",
+    "origin_x": 48.0,
+    "origin_y": 12.0,
+    "approx_points": 12000
+  },
+  {
+    "index": 11,
+    "name": "parking_bumpers",
+    "origin_x": 0.0,
+    "origin_y": 24.0,
+    "approx_points": 1792
+  },
+  {
+    "index": 12,
+    "name": "speed_hump",
+    "origin_x": 12.0,
+    "origin_y": 24.0,
+    "approx_points": 19200
+  },
+  {
+    "index": 13,
+    "name": "utility_cabinet",
+    "origin_x": 24.0,
+    "origin_y": 24.0,
+    "approx_points": 2546
+  },
+  {
+    "index": 14,
+    "name": "phone_cabinet",
+    "origin_x": 36.0,
+    "origin_y": 24.0,
+    "approx_points": 1872
+  },
+  {
+    "index": 15,
+    "name": "tree",
+    "origin_x": 48.0,
+    "origin_y": 24.0,
+    "approx_points": 2060
+  },
+  {
+    "index": 16,
+    "name": "furniture_boxes",
+    "origin_x": 0.0,
+    "origin_y": 36.0,
+    "approx_points": 3038
+  },
+  {
+    "index": 17,
+    "name": "driveway_crown",
+    "origin_x": 12.0,
+    "origin_y": 36.0,
+    "approx_points": 19200
+  },
+  {
+    "index": 18,
+    "name": "guardrail",
+    "origin_x": 24.0,
+    "origin_y": 36.0,
+    "approx_points": 1400
+  },
+  {
+    "index": 19,
+    "name": "bollards",
+    "origin_x": 36.0,
+    "origin_y": 36.0,
+    "approx_points": 1440
+  },
+  {
+    "index": 20,
+    "name": "street_banked",
+    "origin_x": 48.0,
+    "origin_y": 36.0,
+    "approx_points": 32000
+  },
+  {
+    "index": 21,
+    "name": "stop_sign",
+    "origin_x": 0.0,
+    "origin_y": 48.0,
+    "approx_points": 1176
+  },
+  {
+    "index": 22,
+    "name": "streetlight",
+    "origin_x": 12.0,
+    "origin_y": 48.0,
+    "approx_points": 2706
+  },
+  {
+    "index": 23,
+    "name": "fire_hydrant",
+    "origin_x": 24.0,
+    "origin_y": 48.0,
+    "approx_points": 570
+  },
+  {
+    "index": 24,
+    "name": "mailbox_cluster",
+    "origin_x": 36.0,
+    "origin_y": 48.0,
+    "approx_points": 1184
+  },
+  {
+    "index": 25,
+    "name": "bike_rack_u",
+    "origin_x": 48.0,
+    "origin_y": 48.0,
+    "approx_points": 455
+  },
+  {
+    "index": 26,
+    "name": "trash_can",
+    "origin_x": 0.0,
+    "origin_y": 60.0,
+    "approx_points": 704
+  },
+  {
+    "index": 27,
+    "name": "picnic_table",
+    "origin_x": 12.0,
+    "origin_y": 60.0,
+    "approx_points": 3240
+  },
+  {
+    "index": 28,
+    "name": "median_island",
+    "origin_x": 24.0,
+    "origin_y": 60.0,
+    "approx_points": 3680
+  },
+  {
+    "index": 29,
+    "name": "ped_ramp_tactile",
+    "origin_x": 36.0,
+    "origin_y": 60.0,
+    "approx_points": 2048
+  },
+  {
+    "index": 30,
+    "name": "storm_inlet_grate",
+    "origin_x": 48.0,
+    "origin_y": 60.0,
+    "approx_points": 946
+  }
+]
