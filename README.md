@@ -51,16 +51,48 @@ The toolkit includes 30 distinct urban infrastructure scenes:
 
 ## Installation
 
+### Prerequisites
+
+- Python 3.8 or higher
+- pip package manager
+
+### Setup Instructions
+
 1. Clone this repository:
 ```bash
 git clone https://github.com/Connor-Tluck/synthetic-las-generation.git
 cd synthetic-las-generation
 ```
 
-2. Install dependencies:
+2. Create a virtual environment (recommended):
+```bash
+python -m venv venv
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+```
+
+3. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
+
+### Alternative Installation
+
+If you encounter issues with the requirements file, you can install packages individually:
+
+```bash
+pip install numpy>=1.21.0
+pip install "laspy[lazrs]>=2.0.0"
+pip install open3d>=0.15.0
+```
+
+### Troubleshooting
+
+- **Windows users**: If you encounter issues with `laspy[lazrs]`, try installing without the extras first: `pip install laspy>=2.0.0`
+- **macOS users**: You may need to install additional dependencies for Open3D: `brew install libomp`
+- **Linux users**: Ensure you have the necessary system dependencies for Open3D
 
 ## Usage
 
@@ -170,9 +202,14 @@ This synthetic data is ideal for:
 
 ## Dependencies
 
-- **numpy**: Numerical computations
-- **laspy[lazrs]**: LAS/LAZ file I/O
-- **open3d**: 3D visualization (optional)
+- **numpy** (≥1.21.0): Numerical computations and array operations
+- **laspy[lazrs]** (≥2.0.0): LAS/LAZ file I/O with compression support
+- **open3d** (≥0.15.0): 3D visualization and point cloud processing (optional)
+
+### Optional Dependencies
+
+- **matplotlib**: For additional plotting capabilities
+- **scipy**: For advanced mathematical operations
 
 ## License
 
