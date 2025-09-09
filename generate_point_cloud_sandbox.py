@@ -321,7 +321,7 @@ def make_barrier_jersey(run_len, base_z, spacing=BASE_SPACING):
     return stack_fields([base, face1, face2, top])
 
 def make_street_patch(width, length, base_z, slope=(0.0, 0.0), spacing=BASE_SPACING):
-    return make_plane(length, width, base_z, "asphalt", "road_surface", spacing, slope=slope)
+    return make_plane(width, length, base_z, "asphalt", "road_surface", spacing, slope=slope)
 
 def make_manholes_and_grates(count, base_z, spacing=BASE_SPACING):
     parts = []

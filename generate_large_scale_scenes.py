@@ -94,12 +94,16 @@ class LargeScaleGenerator:
             
             # Convert to LAZ if requested
             if WRITE_LAZ:
-                import laspy
-                laz_file = self.output_dir / f"{filename}.laz"
-                las = laspy.read(las_file)
-                las.write(laz_file)
-                las_file.unlink()  # Remove temporary LAS file
-                final_file = laz_file
+                try:
+                    import laspy
+                    laz_file = self.output_dir / f"{filename}.laz"
+                    las = laspy.read(las_file)
+                    las.write(laz_file)
+                    las_file.unlink()  # Remove temporary LAS file
+                    final_file = laz_file
+                except Exception as e:
+                    print(f"  Warning: Could not compress to LAZ ({e}), keeping LAS file")
+                    final_file = las_file
             else:
                 final_file = las_file
             
@@ -124,7 +128,8 @@ class LargeScaleGenerator:
                 'metadata_file': metadata_file,
                 'point_count': len(scene_data['x']),
                 'generation_time': generation_time,
-                'metadata': metadata
+                'metadata': metadata,
+                'scene_data': scene_data  # Include scene data for preview
             }
             
         except Exception as e:
@@ -255,6 +260,43 @@ class LargeScaleGenerator:
             }
         }
     
+    def preview_scene(self, scene_data: Dict[str, np.ndarray]):
+        """
+        Open 3D preview of the generated scene.
+        
+        Args:
+            scene_data: Point cloud data to preview
+        """
+        try:
+            import open3d as o3d
+            
+            # Create point cloud
+            points = np.vstack([scene_data['x'], scene_data['y'], scene_data['z']]).T
+            
+            # Create colors
+            if ADD_RGB and all(k in scene_data for k in ["red", "green", "blue"]):
+                colors = np.vstack([
+                    scene_data['red'],
+                    scene_data['green'],
+                    scene_data['blue']
+                ]).T.astype(np.float32) / 65535.0
+            else:
+                # Use intensity for grayscale
+                colors = (scene_data['intensity'].astype(np.float32) / 65535.0).reshape(-1, 1)
+                colors = np.repeat(colors, 3, axis=1)
+            
+            # Create Open3D point cloud
+            pcd = o3d.geometry.PointCloud(o3d.utility.Vector3dVector(points))
+            pcd.colors = o3d.utility.Vector3dVector(colors)
+            
+            print("  Opening 3D preview...")
+            o3d.visualization.draw_geometries([pcd], window_name="Synthetic Scene Preview")
+            
+        except ImportError:
+            print("  Warning: Open3D not available for preview")
+        except Exception as e:
+            print(f"  Warning: Could not open preview: {e}")
+    
     def list_available_configs(self):
         """List all available predefined configurations."""
         configs = self.config_manager.get_available_configs()
@@ -293,6 +335,9 @@ Examples:
 
   # Generate with custom output directory
   python generate_large_scale_scenes.py --config urban_park --output-dir ./my_scenes
+  
+  # Generate and preview the scene
+  python generate_large_scale_scenes.py --config residential_street --preview
         """
     )
     
@@ -348,6 +393,12 @@ Examples:
         help='Verbose output'
     )
     
+    parser.add_argument(
+        '--preview', '-p',
+        action='store_true',
+        help='Open 3D preview after generation'
+    )
+    
     args = parser.parse_args()
     
     # Handle list-configs option
@@ -380,6 +431,19 @@ Examples:
         else:
             # Use custom configuration
             results = generator.generate_from_custom_config(args.custom_config, args.count)
+        
+        # Handle preview for successful generations
+        if args.preview:
+            successful_results = [r for r in results if r['success']]
+            if successful_results:
+                # Preview the first successful result
+                first_result = successful_results[0]
+                if 'scene_data' in first_result:
+                    generator.preview_scene(first_result['scene_data'])
+                else:
+                    print("  Warning: Scene data not available for preview")
+            else:
+                print("  Warning: No successful generations to preview")
         
         # Print summary
         successful = [r for r in results if r['success']]

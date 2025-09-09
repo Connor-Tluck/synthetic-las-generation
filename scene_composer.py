@@ -198,10 +198,11 @@ class SceneComposer:
     
     def _place_road(self, feature_config: FeatureConfig, config: SceneConfig, 
                    instance_index: int) -> PlacementRule:
-        """Place road elements at scene center."""
+        """Place road elements at scene center, running along the length."""
         scene_width = config.scene_size['width']
         scene_length = config.scene_size['length']
         
+        # Road should run along the length (Y-axis) and be centered in width (X-axis)
         if 'center_x' in feature_config.placement_rules:
             x = scene_width / 2
         else:
@@ -271,17 +272,15 @@ class SceneComposer:
         offset = feature_config.placement_rules.get('offset_from_sidewalk', 1.0)
         side = feature_config.placement_rules.get('side', 'both')
         
-        # Calculate grid positions
+        # Calculate grid positions along the length
         trees_per_side = feature_config.count // 2 if side == 'both' else feature_config.count
         trees_per_row = int(scene_length / spacing)
         
         if trees_per_row == 0:
             trees_per_row = 1
         
-        row = instance_index // trees_per_row
-        col = instance_index % trees_per_row
-        
-        y = (col + 1) * (scene_length / (trees_per_row + 1))
+        # Distribute trees along the length (Y-axis)
+        y = (instance_index + 1) * (scene_length / (trees_per_row + 1))
         
         if side == 'both':
             if instance_index % 2 == 0:
@@ -317,10 +316,8 @@ class SceneComposer:
         if lights_per_row == 0:
             lights_per_row = 1
         
-        row = instance_index // lights_per_row
-        col = instance_index % lights_per_row
-        
-        y = (col + 1) * (scene_length / (lights_per_row + 1))
+        # Distribute lights along the length (Y-axis)
+        y = (instance_index + 1) * (scene_length / (lights_per_row + 1))
         
         if side == 'both':
             if instance_index % 2 == 0:

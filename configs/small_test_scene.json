@@ -1,0 +1,72 @@
+{
+  "name": "Small Test Scene",
+  "description": "A small test scene for quick generation and testing",
+  "complexity": "basic",
+  "scene_size": {
+    "width": 20.0,
+    "length": 30.0,
+    "height": 10.0
+  },
+  "features": {
+    "street_patch": {
+      "count": 1,
+      "parameters": {
+        "width": 6.0,
+        "length": 30.0,
+        "base_z": 0.0,
+        "slope": [0.0, 0.01]
+      },
+      "placement_rules": {
+        "center_x": true,
+        "center_y": true
+      },
+      "enabled": true
+    },
+    "sidewalk": {
+      "count": 2,
+      "parameters": {
+        "width": 1.5,
+        "length": 30.0,
+        "base_z": 0.0
+      },
+      "placement_rules": {
+        "offset_from_road": 4.0,
+        "side": "both"
+      },
+      "enabled": true
+    },
+    "tree": {
+      "count": 6,
+      "parameters": {
+        "base_z": 0.0
+      },
+      "placement_rules": {
+        "spacing": 8.0,
+        "offset_from_sidewalk": 1.0,
+        "side": "both"
+      },
+      "enabled": true
+    },
+    "streetlight": {
+      "count": 3,
+      "parameters": {
+        "base_z": 0.0
+      },
+      "placement_rules": {
+        "spacing": 15.0,
+        "offset_from_road": 3.0,
+        "side": "alternating"
+      },
+      "enabled": true
+    }
+  },
+  "composition_rules": {
+    "road_center": true,
+    "sidewalk_symmetry": true
+  },
+  "output_settings": {
+    "format": "laz",
+    "compression": true,
+    "include_metadata": true
+  }
+}
