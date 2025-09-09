@@ -1,0 +1,142 @@
+{
+  "name": "Custom Urban Corridor",
+  "description": "A custom urban corridor with mixed residential and commercial elements",
+  "complexity": "detailed",
+  "scene_size": {
+    "width": 60.0,
+    "length": 150.0,
+    "height": 20.0
+  },
+  "features": {
+    "street_patch": {
+      "count": 1,
+      "parameters": {
+        "width": 12.0,
+        "length": 150.0,
+        "base_z": 0.0,
+        "slope": [0.0, 0.01]
+      },
+      "placement_rules": {
+        "center_x": true,
+        "center_y": true
+      },
+      "enabled": true
+    },
+    "sidewalk": {
+      "count": 2,
+      "parameters": {
+        "width": 3.0,
+        "length": 150.0,
+        "base_z": 0.0
+      },
+      "placement_rules": {
+        "offset_from_road": 7.0,
+        "side": "both"
+      },
+      "enabled": true
+    },
+    "curb_with_road": {
+      "count": 2,
+      "parameters": {
+        "run_len": 150.0,
+        "curb_w": 0.3,
+        "curb_h": 0.15,
+        "base_z": 0.0,
+        "road_slope": [0.0, 0.002]
+      },
+      "placement_rules": {
+        "offset_from_road": 6.0,
+        "side": "both"
+      },
+      "enabled": true
+    },
+    "tree": {
+      "count": 30,
+      "parameters": {
+        "base_z": 0.0
+      },
+      "placement_rules": {
+        "spacing": 10.0,
+        "offset_from_sidewalk": 1.5,
+        "side": "both"
+      },
+      "enabled": true
+    },
+    "streetlight": {
+      "count": 15,
+      "parameters": {
+        "base_z": 0.0
+      },
+      "placement_rules": {
+        "spacing": 25.0,
+        "offset_from_road": 4.0,
+        "side": "alternating"
+      },
+      "enabled": true
+    },
+    "utility_cabinet": {
+      "count": 4,
+      "parameters": {
+        "base_z": 0.0
+      },
+      "placement_rules": {
+        "offset_from_sidewalk": 2.0,
+        "side": "random"
+      },
+      "enabled": true
+    },
+    "fire_hydrant": {
+      "count": 5,
+      "parameters": {
+        "base_z": 0.0
+      },
+      "placement_rules": {
+        "offset_from_curb": 1.0,
+        "side": "random"
+      },
+      "enabled": true
+    },
+    "bench": {
+      "count": 8,
+      "parameters": {
+        "base_z": 0.0
+      },
+      "placement_rules": {
+        "spacing": 20.0
+      },
+      "enabled": true
+    },
+    "trash_can": {
+      "count": 6,
+      "parameters": {
+        "base_z": 0.0
+      },
+      "placement_rules": {
+        "spacing": 25.0
+      },
+      "enabled": true
+    },
+    "bike_rack_u": {
+      "count": 4,
+      "parameters": {
+        "base_z": 0.0
+      },
+      "placement_rules": {
+        "near_entrances": true
+      },
+      "enabled": true
+    }
+  },
+  "composition_rules": {
+    "road_center": true,
+    "sidewalk_symmetry": true,
+    "utility_spacing": 25.0,
+    "vegetation_density": 0.7,
+    "mixed_use": true
+  },
+  "output_settings": {
+    "format": "laz",
+    "compression": true,
+    "include_metadata": true
+  }
+}

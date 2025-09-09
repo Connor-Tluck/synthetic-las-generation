@@ -6,6 +6,7 @@ A Python toolkit for generating synthetic LiDAR point cloud data in LAS/LAZ form
 
 ## Features
 
+### Core Generation System
 - **30+ Pre-built Scenes**: Street patches, crosswalks, curbs, barriers, stairs, benches, power poles, manholes, sidewalks, and more
 - **Realistic Materials**: Different intensity values and RGB colors for various materials (asphalt, concrete, metal, wood, vegetation, etc.)
 - **ASPRS Classification**: Proper point classification codes following ASPRS standards
@@ -13,6 +14,16 @@ A Python toolkit for generating synthetic LiDAR point cloud data in LAS/LAZ form
 - **Multiple Formats**: Export to both LAS and LAZ formats
 - **3D Visualization**: Optional Open3D preview with RGB or intensity-based coloring
 - **Batch Processing**: Generate individual scenes plus combined datasets
+
+### Large-Scale Generation System
+- **Professional Architecture**: Modular, production-ready codebase
+- **Realistic Scene Composition**: Urban planning principles for realistic feature placement
+- **Configurable Scenes**: Predefined configurations (residential, commercial, highway, park)
+- **Custom Configurations**: JSON-based scene configuration system
+- **Feature Selection**: Choose how many of each infrastructure element to include
+- **Realistic Placement**: Crosswalks at intersections, trees along roads, utilities with proper spacing
+- **Batch Generation**: Generate multiple scene variations efficiently
+- **Comprehensive Metadata**: Detailed scene information and statistics
 
 ## Generated Scenes
 
@@ -96,9 +107,24 @@ pip install open3d>=0.15.0
 
 ## Usage
 
-### Generate All Scenes
+### Quick Start - Large-Scale Generation
 
-Run the main script to generate all 30 scenes:
+Generate realistic urban scenes with configurable features:
+
+```bash
+# Generate a residential street scene
+python generate_large_scale_scenes.py --config residential_street
+
+# Generate 5 commercial intersection scenes
+python generate_large_scale_scenes.py --config commercial_intersection --count 5
+
+# List available configurations
+python generate_large_scale_scenes.py --list-configs
+```
+
+### Core Generation System
+
+Generate all 30 individual scenes:
 
 ```bash
 python generate_point_cloud_sandbox.py
@@ -130,6 +156,7 @@ python demo_scene.py path/to/your/file.laz
 
 ## Output Structure
 
+### Core Generation System
 ```
 pointcloud_sandbox_output/
 ├── 01_street_patch.laz
@@ -139,6 +166,16 @@ pointcloud_sandbox_output/
 ├── combined_sandbox.laz
 ├── combined_sandbox.zip
 └── legend.json
+```
+
+### Large-Scale Generation System
+```
+large_scale_output/
+├── residential_street_001.laz
+├── residential_street_001_metadata.json
+├── commercial_intersection_001.laz
+├── commercial_intersection_001_metadata.json
+└── ...
 ```
 
 ## Point Cloud Properties
@@ -187,18 +224,29 @@ Following ASPRS LAS specification:
 This synthetic data is ideal for:
 
 - **Algorithm Testing**: LiDAR processing, classification, and analysis
-- **Machine Learning**: Training data for point cloud segmentation
+- **Machine Learning**: Training data for point cloud segmentation and urban scene understanding
 - **Software Development**: Testing LiDAR software without real data
 - **Research**: Urban infrastructure analysis and modeling
 - **Education**: Teaching LiDAR concepts and processing
+- **Simulation**: Urban planning and infrastructure design
+- **Data Augmentation**: Enhancing real LiDAR datasets with synthetic variations
 
 ## Technical Details
 
+### Core Generation System
 - **Grid-based Generation**: Systematic point placement with natural jitter
 - **Material Simulation**: Realistic intensity and color values
 - **Geometric Primitives**: Planes, boxes, cylinders, and custom shapes
 - **Scene Composition**: Modular building blocks for complex scenes
 - **Export Pipeline**: LAS/LAZ format with proper headers and metadata
+
+### Large-Scale Generation System
+- **Modular Architecture**: Separated concerns with SceneGenerator, SceneComposer, and ConfigurationManager
+- **Realistic Placement**: Urban planning principles for feature positioning
+- **Priority-based Composition**: Infrastructure placed before details for realistic scenes
+- **Collision Avoidance**: Basic spatial conflict resolution
+- **Metadata Generation**: Comprehensive scene statistics and configuration tracking
+- **Batch Processing**: Efficient generation of multiple scene variations
 
 ## Dependencies
 
@@ -218,6 +266,53 @@ This project is open source. See the repository for license details.
 ## Contributing
 
 Contributions are welcome! Please feel free to submit issues, feature requests, or pull requests.
+
+## Large-Scale Generation System
+
+The project includes a professional large-scale generation system for creating realistic urban environments:
+
+### Key Features
+- **Predefined Configurations**: Residential streets, commercial intersections, highways, urban parks
+- **Custom Configurations**: JSON-based scene configuration system
+- **Realistic Composition**: Features placed according to urban planning principles
+- **Feature Selection**: Choose how many of each infrastructure element to include
+- **Batch Generation**: Generate multiple scene variations efficiently
+
+### Quick Examples
+```bash
+# Generate a residential street
+python generate_large_scale_scenes.py --config residential_street
+
+# Generate 5 commercial intersections
+python generate_large_scale_scenes.py --config commercial_intersection --count 5
+
+# Use custom configuration
+python generate_large_scale_scenes.py --custom-config configs/my_scene.json
+```
+
+### Documentation
+For detailed information about the large-scale generation system, see:
+- [Large-Scale Generation Documentation](docs/LARGE_SCALE_GENERATION.md)
+- [Sample Configuration](configs/sample_custom_scene.json)
+
+## Project Structure
+
+```
+synthetic-las-generation/
+├── generate_point_cloud_sandbox.py    # Core generation system
+├── generate_large_scale_scenes.py     # Large-scale generation system
+├── demo_scene.py                      # 3D viewer
+├── synthetic_scenes.py                # Scene generation module
+├── scene_config.py                    # Configuration management
+├── scene_composer.py                  # Scene composition engine
+├── configs/                           # Configuration files
+│   └── sample_custom_scene.json
+├── docs/                              # Documentation
+│   └── LARGE_SCALE_GENERATION.md
+├── images/                            # Project images
+├── pointcloud_sandbox_output/         # Core system output
+└── large_scale_output/                # Large-scale system output
+```
 
 ## Contact
 

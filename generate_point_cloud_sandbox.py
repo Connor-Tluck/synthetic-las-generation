@@ -31,8 +31,8 @@ TARGET_PPM2 = 400.0
 BASE_SPACING = (1.0 / TARGET_PPM2) ** 0.5
 
 # jitter for natural look
-XY_JITTER = 0.015
-Z_JITTER = 0.005
+XY_JITTER = 0.00
+Z_JITTER = 0.000
 
 # scene placement
 GRID_COLUMNS = 5
