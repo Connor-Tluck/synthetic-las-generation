@@ -1,0 +1,166 @@
+{
+  "density_levels": [
+    5000
+  ],
+  "grid_spacing": 50.0,
+  "shapes": [
+    "flat_plane",
+    "rotated_plane",
+    "stepped_stairs",
+    "sphere",
+    "stepped_pyramid",
+    "cone",
+    "torus",
+    "hexagon",
+    "octagon",
+    "ellipse",
+    "cross",
+    "helix",
+    "parabolic_dish",
+    "geodesic_dome"
+  ],
+  "grid_metadata": [
+    {
+      "shape": "flat_plane",
+      "density": 5000,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "points": 7997584
+    },
+    {
+      "shape": "rotated_plane",
+      "density": 5000,
+      "position": [
+        0.0,
+        50.0,
+        0.0
+      ],
+      "points": 5116644
+    },
+    {
+      "shape": "stepped_stairs",
+      "density": 5000,
+      "position": [
+        0.0,
+        100.0,
+        0.0
+      ],
+      "points": 71232
+    },
+    {
+      "shape": "sphere",
+      "density": 5000,
+      "position": [
+        0.0,
+        150.0,
+        0.0
+      ],
+      "points": 392699
+    },
+    {
+      "shape": "stepped_pyramid",
+      "density": 5000,
+      "position": [
+        0.0,
+        200.0,
+        0.0
+      ],
+      "points": 502412
+    },
+    {
+      "shape": "cone",
+      "density": 5000,
+      "position": [
+        0.0,
+        250.0,
+        0.0
+      ],
+      "points": 368224
+    },
+    {
+      "shape": "torus",
+      "density": 5000,
+      "position": [
+        0.0,
+        300.0,
+        0.0
+      ],
+      "points": 666435
+    },
+    {
+      "shape": "hexagon",
+      "density": 5000,
+      "position": [
+        0.0,
+        350.0,
+        0.0
+      ],
+      "points": 67895
+    },
+    {
+      "shape": "octagon",
+      "density": 5000,
+      "position": [
+        0.0,
+        400.0,
+        0.0
+      ],
+      "points": 10562
+    },
+    {
+      "shape": "ellipse",
+      "density": 5000,
+      "position": [
+        0.0,
+        450.0,
+        0.0
+      ],
+      "points": 197887
+    },
+    {
+      "shape": "cross",
+      "density": 5000,
+      "position": [
+        0.0,
+        500.0,
+        0.0
+      ],
+      "points": 53704
+    },
+    {
+      "shape": "helix",
+      "density": 5000,
+      "position": [
+        0.0,
+        550.0,
+        0.0
+      ],
+      "points": 3909
+    },
+    {
+      "shape": "parabolic_dish",
+      "density": 5000,
+      "position": [
+        0.0,
+        600.0,
+        0.0
+      ],
+      "points": 181548
+    },
+    {
+      "shape": "geodesic_dome",
+      "density": 5000,
+      "position": [
+        0.0,
+        650.0,
+        0.0
+      ],
+      "points": 773768
+    }
+  ],
+  "total_points": 16404503,
+  "z_offset": 0.0
+}

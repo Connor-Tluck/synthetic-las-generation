@@ -699,5 +699,137 @@ def main():
         pcd.colors = o3d.utility.Vector3dVector(colors)
         o3d.visualization.draw_geometries([pcd])
 
+# -----------------------------
+# Additional Geometric Shapes for Enhanced Testing
+# -----------------------------
+
+def make_sphere(radius=1.0, base_z=0.0, material="concrete", classification="unclassified", point_spacing=0.05):
+    """Create a sphere using Fibonacci spiral distribution."""
+    points = []
+    intensities = []
+    classes = []
+    colors = []
+    
+    # Use Fibonacci spiral for even distribution on sphere
+    n = max(100, int(4 * np.pi * radius**2 / (point_spacing**2)))
+    golden_angle = np.pi * (3 - np.sqrt(5))  # Golden angle in radians
+    
+    for i in range(n):
+        y = 1 - (i / (n - 1)) * 2  # y goes from 1 to -1
+        radius_at_y = np.sqrt(1 - y * y)  # radius at current y
+        theta = golden_angle * i  # golden angle increment
+        
+        x = np.cos(theta) * radius_at_y * radius
+        z = np.sin(theta) * radius_at_y * radius
+        y = y * radius + base_z
+        
+        points.append([x, y, z])
+        intensities.append(MAT_INT[material][0])
+        classes.append(CLASS[classification])
+        colors.append(MAT_RGB_255[material])
+    
+    return {
+        "x": np.array([p[0] for p in points]),
+        "y": np.array([p[1] for p in points]),
+        "z": np.array([p[2] for p in points]),
+        "intensity": np.array(intensities, dtype=np.uint16),
+        "class": np.array(classes, dtype=np.uint8),
+        "red": np.array([c[0] for c in colors], dtype=np.uint16),
+        "green": np.array([c[1] for c in colors], dtype=np.uint16),
+        "blue": np.array([c[2] for c in colors], dtype=np.uint16)
+    }
+
+def make_stepped_pyramid(base_size=2.0, height=1.5, levels=3, base_z=0.0, material="concrete", classification="unclassified", point_spacing=0.05):
+    """Create a stepped pyramid with multiple levels."""
+    steps = []
+    
+    for i in range(levels):
+        step_size = base_size * (levels - i) / levels
+        step_height = height / levels
+        step_z = base_z + i * step_height
+        
+        step = make_box(step_size, step_size, step_height, step_z, material, classification, point_spacing)
+        steps.append(step)
+    
+    return stack_fields(steps)
+
+def make_hexagon(radius=1.5, base_z=0.0, material="concrete", classification="unclassified", point_spacing=0.05):
+    """Create a hexagonal shape."""
+    points = []
+    intensities = []
+    classes = []
+    colors = []
+    
+    # Create hexagonal boundary and fill
+    for x in np.arange(-radius, radius, point_spacing):
+        for y in np.arange(-radius, radius, point_spacing):
+            # Check if point is inside hexagon
+            if abs(x) <= radius and abs(y) <= radius * np.sqrt(3) / 2:
+                if abs(y) <= radius * np.sqrt(3) / 2 - abs(x) * np.sqrt(3) / 2:
+                    points.append([x, y, base_z])
+                    intensities.append(MAT_INT[material][0])
+                    classes.append(CLASS[classification])
+                    colors.append(MAT_RGB_255[material])
+    
+    return {
+        "x": np.array([p[0] for p in points]),
+        "y": np.array([p[1] for p in points]),
+        "z": np.array([p[2] for p in points]),
+        "intensity": np.array(intensities, dtype=np.uint16),
+        "class": np.array(classes, dtype=np.uint8),
+        "red": np.array([c[0] for c in colors], dtype=np.uint16),
+        "green": np.array([c[1] for c in colors], dtype=np.uint16),
+        "blue": np.array([c[2] for c in colors], dtype=np.uint16)
+    }
+
+def make_cross(length=2.0, width=0.3, base_z=0.0, material="concrete", classification="unclassified", point_spacing=0.05):
+    """Create a cross shape."""
+    # Vertical part
+    vertical = make_box(width, length, 0.1, base_z, material, classification, point_spacing)
+    
+    # Horizontal part
+    horizontal = make_box(length, width, 0.1, base_z, material, classification, point_spacing)
+    
+    return stack_fields([vertical, horizontal])
+
+def make_bollard_line(length=4.0, spacing=1.5, radius=0.1, height=1.0, base_z=0.0, material="metal", classification="unclassified", point_spacing=0.05):
+    """Create a line of repeating bollards."""
+    bollards = []
+    num_bollards = int(length / spacing) + 1
+    
+    for i in range(num_bollards):
+        x = i * spacing - length/2  # Center the line
+        bollard = make_cylinder(radius, height, base_z, material, classification, point_spacing)
+        bollard["x"] = bollard["x"] + x
+        bollards.append(bollard)
+    
+    return stack_fields(bollards)
+
+def make_speed_hump_line(length=6.0, spacing=2.0, width=3.0, height=0.12, base_z=0.0, material="asphalt", classification="road_surface", point_spacing=0.05):
+    """Create a line of repeating speed humps."""
+    humps = []
+    num_humps = int(length / spacing) + 1
+    
+    for i in range(num_humps):
+        x = i * spacing - length/2  # Center the line
+        hump = make_speed_hump(width, spacing * 0.8, height, base_z, point_spacing)
+        hump["x"] = hump["x"] + x
+        humps.append(hump)
+    
+    return stack_fields(humps)
+
+def make_inlet_line(length=5.0, spacing=2.5, base_z=0.0, material="metal", classification="unclassified", point_spacing=0.05):
+    """Create a line of repeating storm inlets."""
+    inlets = []
+    num_inlets = int(length / spacing) + 1
+    
+    for i in range(num_inlets):
+        x = i * spacing - length/2  # Center the line
+        inlet = make_storm_inlet_grate(base_z, point_spacing)
+        inlet["x"] = inlet["x"] + x
+        inlets.append(inlet)
+    
+    return stack_fields(inlets)
+
 if __name__ == "__main__":
     main()

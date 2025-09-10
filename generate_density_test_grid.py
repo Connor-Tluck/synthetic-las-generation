@@ -28,6 +28,8 @@ from generate_point_cloud_sandbox import (
     make_utility_box, make_phone_cabinet, make_stop_sign, make_streetlight,
     make_fire_hydrant, make_mailbox_cluster, make_bike_rack_u, make_trash_can,
     make_picnic_table, make_storm_inlet_grate, make_speed_hump,
+    make_sphere, make_stepped_pyramid, make_hexagon, make_cross,
+    make_bollard_line, make_speed_hump_line, make_inlet_line,
     translate, stack_fields, ensure_cls, MAT_INT, MAT_RGB_255, CLASS, RNG, XY_JITTER, Z_JITTER
 )
 
@@ -218,10 +220,10 @@ def make_feature_with_density(feature_func, density, **kwargs):
 # -----------------------------
 
 def build_clean_features():
-    """Build list of clean, single-object features from sandbox."""
+    """Build list of enhanced features with repeated objects and new geometric shapes."""
     features = []
     
-    # Basic geometric shapes (these work perfectly)
+    # Keep some essential simple objects for baseline testing
     features.append(("street_patch", lambda **kwargs: make_plane(
         kwargs.get('width', 8.0), kwargs.get('length', 8.0), 
         kwargs.get('base_z', 0.0), "asphalt", "road_surface", kwargs.get('spacing', 0.05)
@@ -232,40 +234,47 @@ def build_clean_features():
         kwargs.get('base_z', 0.0), "concrete", "ground", kwargs.get('spacing', 0.05)
     )))
     
-    # Simple boxes (these work well)
-    features.append(("utility_box", lambda **kwargs: make_utility_box(
-        kwargs.get('base_z', 0.0), kwargs.get('spacing', 0.05)
+    # REPEATED OBJECTS - Objects that typically appear in groups
+    features.append(("bollard_line", lambda **kwargs: make_bollard_line(
+        kwargs.get('length', 5.0), kwargs.get('spacing', 1.5), 
+        kwargs.get('radius', 0.1), kwargs.get('height', 1.0),
+        kwargs.get('base_z', 0.0), "metal", "unclassified", kwargs.get('spacing', 0.05)
     )))
     
-    features.append(("phone_cabinet", lambda **kwargs: make_phone_cabinet(
-        kwargs.get('base_z', 0.0), kwargs.get('spacing', 0.05)
+    features.append(("speed_hump_line", lambda **kwargs: make_speed_hump_line(
+        kwargs.get('length', 6.0), kwargs.get('spacing', 2.0), 
+        kwargs.get('width', 3.0), kwargs.get('height', 0.12),
+        kwargs.get('base_z', 0.0), "asphalt", "road_surface", kwargs.get('spacing', 0.05)
     )))
     
-    features.append(("trash_can", lambda **kwargs: make_trash_can(
-        kwargs.get('base_z', 0.0), kwargs.get('spacing', 0.05)
+    features.append(("inlet_line", lambda **kwargs: make_inlet_line(
+        kwargs.get('length', 5.0), kwargs.get('spacing', 2.5),
+        kwargs.get('base_z', 0.0), "metal", "unclassified", kwargs.get('spacing', 0.05)
     )))
     
-    # Simple cylinders (these work well)
+    # NEW GEOMETRIC SHAPES
+    features.append(("sphere", lambda **kwargs: make_sphere(
+        kwargs.get('radius', 1.2), kwargs.get('base_z', 0.0), 
+        "concrete", "unclassified", kwargs.get('spacing', 0.05)
+    )))
+    
+    features.append(("stepped_pyramid", lambda **kwargs: make_stepped_pyramid(
+        kwargs.get('base_size', 2.5), kwargs.get('height', 1.8), kwargs.get('levels', 4),
+        kwargs.get('base_z', 0.0), "concrete", "unclassified", kwargs.get('spacing', 0.05)
+    )))
+    
+    features.append(("hexagon", lambda **kwargs: make_hexagon(
+        kwargs.get('radius', 1.8), kwargs.get('base_z', 0.0), 
+        "concrete", "unclassified", kwargs.get('spacing', 0.05)
+    )))
+    
+    features.append(("cross", lambda **kwargs: make_cross(
+        kwargs.get('length', 2.5), kwargs.get('width', 0.4), kwargs.get('base_z', 0.0),
+        "concrete", "unclassified", kwargs.get('spacing', 0.05)
+    )))
+    
+    # Keep some essential infrastructure objects
     features.append(("fire_hydrant", lambda **kwargs: make_fire_hydrant(
-        kwargs.get('base_z', 0.0), kwargs.get('spacing', 0.05)
-    )))
-    
-    features.append(("bollard", lambda **kwargs: make_cylinder(
-        kwargs.get('radius', 0.1), kwargs.get('height', 1.0), 
-        kwargs.get('base_z', 0.0), "metal", "unclassified", kwargs.get('spacing', 0.05)
-    )))
-    
-    features.append(("manhole", lambda **kwargs: make_cylinder(
-        kwargs.get('radius', 0.4), kwargs.get('height', 0.1), 
-        kwargs.get('base_z', 0.0), "metal", "unclassified", kwargs.get('spacing', 0.05)
-    )))
-    
-    # Simple composite objects (these work well)
-    features.append(("bench", lambda **kwargs: make_bench(
-        kwargs.get('base_z', 0.0), kwargs.get('spacing', 0.05)
-    )))
-    
-    features.append(("tree", lambda **kwargs: make_tree(
         kwargs.get('base_z', 0.0), kwargs.get('spacing', 0.05)
     )))
     
@@ -273,11 +282,24 @@ def build_clean_features():
         kwargs.get('base_z', 0.0), kwargs.get('spacing', 0.05)
     )))
     
-    features.append(("stop_sign", lambda **kwargs: make_stop_sign(
+    features.append(("stairs", lambda **kwargs: make_stairs(
+        kwargs.get('width', 2.0), kwargs.get('depth', 0.3), kwargs.get('step_h', 0.15),
+        kwargs.get('n_steps', 5), kwargs.get('base_z', 0.0), "concrete", "unclassified", kwargs.get('spacing', 0.05)
+    )))
+    
+    features.append(("utility_box", lambda **kwargs: make_utility_box(
         kwargs.get('base_z', 0.0), kwargs.get('spacing', 0.05)
     )))
     
-    features.append(("mailbox_cluster", lambda **kwargs: make_mailbox_cluster(
+    features.append(("tree", lambda **kwargs: make_tree(
+        kwargs.get('base_z', 0.0), kwargs.get('spacing', 0.05)
+    )))
+    
+    features.append(("bench", lambda **kwargs: make_bench(
+        kwargs.get('base_z', 0.0), kwargs.get('spacing', 0.05)
+    )))
+    
+    features.append(("stop_sign", lambda **kwargs: make_stop_sign(
         kwargs.get('base_z', 0.0), kwargs.get('spacing', 0.05)
     )))
     
@@ -289,60 +311,28 @@ def build_clean_features():
         kwargs.get('base_z', 0.0), kwargs.get('spacing', 0.05)
     )))
     
-    features.append(("storm_inlet", lambda **kwargs: make_storm_inlet_grate(
-        kwargs.get('base_z', 0.0), kwargs.get('spacing', 0.05)
-    )))
-    
-    features.append(("speed_hump", lambda **kwargs: make_speed_hump(
-        kwargs.get('width', 3.0), kwargs.get('length', 0.3), kwargs.get('height', 0.1),
-        kwargs.get('base_z', 0.0), kwargs.get('spacing', 0.05)
-    )))
-    
-    # Simple stairs (these work well) - Perfect for drape tool testing
-    features.append(("stairs", lambda **kwargs: make_stairs(
-        kwargs.get('width', 2.0), kwargs.get('depth', 0.3), kwargs.get('step_h', 0.15),
-        kwargs.get('n_steps', 5), kwargs.get('base_z', 0.0), "concrete", "unclassified", kwargs.get('spacing', 0.05)
-    )))
-    
-    # Additional CAD-focused objects for drawing functionality testing
-    
-    # 1. Simple rectangular platform (good for area measurements)
-    features.append(("platform", lambda **kwargs: make_box(
-        kwargs.get('length', 4.0), kwargs.get('width', 3.0), kwargs.get('height', 0.2),
-        kwargs.get('base_z', 0.0), "concrete", "unclassified", kwargs.get('spacing', 0.05)
-    )))
-    
-    # 2. Cylindrical column (good for circular measurements and radius tools)
-    features.append(("column", lambda **kwargs: make_cylinder(
-        kwargs.get('radius', 0.3), kwargs.get('height', 3.0),
-        kwargs.get('base_z', 0.0), "concrete", "unclassified", kwargs.get('spacing', 0.05)
-    )))
-    
-    # 3. L-shaped structure (good for angle measurements and corner detection)
+    # Keep some complex composite objects for CAD testing
     features.append(("l_shape", lambda **kwargs: stack_fields([
         make_box(2.0, 0.2, 1.0, kwargs.get('base_z', 0.0), "concrete", "unclassified", kwargs.get('spacing', 0.05)),
         make_box(0.2, 2.0, 1.0, kwargs.get('base_z', 0.0), "concrete", "unclassified", kwargs.get('spacing', 0.05))
     ])))
     
-    # 4. Ramp/slope (good for elevation analysis and slope measurements)
-    features.append(("ramp", lambda **kwargs: make_plane(
-        kwargs.get('width', 3.0), kwargs.get('length', 4.0),
-        kwargs.get('base_z', 0.0), "asphalt", "road_surface", kwargs.get('spacing', 0.05),
-        slope=(0.0, 0.1)  # 10% slope
-    )))
-    
-    # 5. Circular platform (good for circular area calculations)
-    features.append(("circular_platform", lambda **kwargs: make_plane(
-        kwargs.get('diameter', 3.0), kwargs.get('diameter', 3.0),
-        kwargs.get('base_z', 0.0), "concrete", "unclassified", kwargs.get('spacing', 0.05)
-    )))
-    
-    # 6. Multi-level structure (good for height measurements and elevation tools)
     features.append(("multi_level", lambda **kwargs: stack_fields([
         make_box(2.0, 2.0, 0.5, kwargs.get('base_z', 0.0), "concrete", "unclassified", kwargs.get('spacing', 0.05)),
         make_box(1.5, 1.5, 0.5, kwargs.get('base_z', 0.5), "concrete", "unclassified", kwargs.get('spacing', 0.05)),
         make_box(1.0, 1.0, 0.5, kwargs.get('base_z', 1.0), "concrete", "unclassified", kwargs.get('spacing', 0.05))
     ])))
+    
+    features.append(("column", lambda **kwargs: make_cylinder(
+        kwargs.get('radius', 0.3), kwargs.get('height', 3.0),
+        kwargs.get('base_z', 0.0), "concrete", "unclassified", kwargs.get('spacing', 0.05)
+    )))
+    
+    features.append(("ramp", lambda **kwargs: make_plane(
+        kwargs.get('width', 3.0), kwargs.get('length', 4.0),
+        kwargs.get('base_z', 0.0), "asphalt", "road_surface", kwargs.get('spacing', 0.05),
+        slope=(0.0, 0.1)  # 10% slope
+    )))
     
     return features
 
@@ -381,7 +371,7 @@ def generate_clean_density_test_grid():
                 scene_data = make_feature_with_density(feature_func, density)
                 scene_data = ensure_cls(scene_data)
                 
-                # Translate to grid position
+                # Translate to grid position with Z offset
                 scene_data = translate(scene_data, x, y, 0.0)
                 
                 # Add density label (skip if None)
@@ -506,11 +496,11 @@ def generate_clean_density_test_grid():
         render_option.point_size = 2.0  # Larger point size for better visibility
         render_option.background_color = np.array([0.1, 0.1, 0.1])  # Dark background
 
-        # Set up camera with better initial view
+        # Set up camera with better initial view - look at Z = -420 where objects are
         ctr = vis.get_view_control()
         ctr.set_front([0, 0, -1])
         ctr.set_up([0, -1, 0])
-        ctr.set_lookat([0, 0, 0])
+        ctr.set_lookat([0, 0, 0])  # Look at the Z level where objects are positioned
         ctr.set_zoom(0.3)  # Start more zoomed out
 
         print("  Enhanced preview with better zoom controls:")

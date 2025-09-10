@@ -10,28 +10,26 @@
   "features": [
     "street_patch",
     "sidewalk",
-    "utility_box",
-    "phone_cabinet",
-    "trash_can",
+    "bollard_line",
+    "speed_hump_line",
+    "inlet_line",
+    "sphere",
+    "stepped_pyramid",
+    "hexagon",
+    "cross",
     "fire_hydrant",
-    "bollard",
-    "manhole",
-    "bench",
-    "tree",
     "streetlight",
+    "stairs",
+    "utility_box",
+    "tree",
+    "bench",
     "stop_sign",
-    "mailbox_cluster",
     "bike_rack",
     "picnic_table",
-    "storm_inlet",
-    "speed_hump",
-    "stairs",
-    "platform",
-    "column",
     "l_shape",
-    "ramp",
-    "circular_platform",
-    "multi_level"
+    "multi_level",
+    "column",
+    "ramp"
   ],
   "grid_metadata": [
     {
@@ -147,7 +145,7 @@
     {
       "row": 2,
       "col": 0,
-      "feature_name": "utility_box",
+      "feature_name": "bollard_line",
       "density": 10,
       "position": {
         "x": 0.0,
@@ -158,7 +156,7 @@
     {
       "row": 2,
       "col": 1,
-      "feature_name": "utility_box",
+      "feature_name": "bollard_line",
       "density": 50,
       "position": {
         "x": 20.0,
@@ -169,7 +167,7 @@
     {
       "row": 2,
       "col": 2,
-      "feature_name": "utility_box",
+      "feature_name": "bollard_line",
       "density": 200,
       "position": {
         "x": 40.0,
@@ -180,7 +178,7 @@
     {
       "row": 2,
       "col": 3,
-      "feature_name": "utility_box",
+      "feature_name": "bollard_line",
       "density": 1000,
       "position": {
         "x": 60.0,
@@ -191,7 +189,7 @@
     {
       "row": 2,
       "col": 4,
-      "feature_name": "utility_box",
+      "feature_name": "bollard_line",
       "density": 5000,
       "position": {
         "x": 80.0,
@@ -202,7 +200,7 @@
     {
       "row": 3,
       "col": 0,
-      "feature_name": "phone_cabinet",
+      "feature_name": "speed_hump_line",
       "density": 10,
       "position": {
         "x": 0.0,
@@ -213,7 +211,7 @@
     {
       "row": 3,
       "col": 1,
-      "feature_name": "phone_cabinet",
+      "feature_name": "speed_hump_line",
       "density": 50,
       "position": {
         "x": 20.0,
@@ -224,7 +222,7 @@
     {
       "row": 3,
       "col": 2,
-      "feature_name": "phone_cabinet",
+      "feature_name": "speed_hump_line",
       "density": 200,
       "position": {
         "x": 40.0,
@@ -235,7 +233,7 @@
     {
       "row": 3,
       "col": 3,
-      "feature_name": "phone_cabinet",
+      "feature_name": "speed_hump_line",
       "density": 1000,
       "position": {
         "x": 60.0,
@@ -246,7 +244,7 @@
     {
       "row": 3,
       "col": 4,
-      "feature_name": "phone_cabinet",
+      "feature_name": "speed_hump_line",
       "density": 5000,
       "position": {
         "x": 80.0,
@@ -257,7 +255,7 @@
     {
       "row": 4,
       "col": 0,
-      "feature_name": "trash_can",
+      "feature_name": "inlet_line",
       "density": 10,
       "position": {
         "x": 0.0,
@@ -268,7 +266,7 @@
     {
       "row": 4,
       "col": 1,
-      "feature_name": "trash_can",
+      "feature_name": "inlet_line",
       "density": 50,
       "position": {
         "x": 20.0,
@@ -279,7 +277,7 @@
     {
       "row": 4,
       "col": 2,
-      "feature_name": "trash_can",
+      "feature_name": "inlet_line",
       "density": 200,
       "position": {
         "x": 40.0,
@@ -290,7 +288,7 @@
     {
       "row": 4,
       "col": 3,
-      "feature_name": "trash_can",
+      "feature_name": "inlet_line",
       "density": 1000,
       "position": {
         "x": 60.0,
@@ -301,7 +299,7 @@
     {
       "row": 4,
       "col": 4,
-      "feature_name": "trash_can",
+      "feature_name": "inlet_line",
       "density": 5000,
       "position": {
         "x": 80.0,
@@ -312,7 +310,7 @@
     {
       "row": 5,
       "col": 0,
-      "feature_name": "fire_hydrant",
+      "feature_name": "sphere",
       "density": 10,
       "position": {
         "x": 0.0,
@@ -323,7 +321,7 @@
     {
       "row": 5,
       "col": 1,
-      "feature_name": "fire_hydrant",
+      "feature_name": "sphere",
       "density": 50,
       "position": {
         "x": 20.0,
@@ -334,7 +332,7 @@
     {
       "row": 5,
       "col": 2,
-      "feature_name": "fire_hydrant",
+      "feature_name": "sphere",
       "density": 200,
       "position": {
         "x": 40.0,
@@ -345,7 +343,7 @@
     {
       "row": 5,
       "col": 3,
-      "feature_name": "fire_hydrant",
+      "feature_name": "sphere",
       "density": 1000,
       "position": {
         "x": 60.0,
@@ -356,7 +354,7 @@
     {
       "row": 5,
       "col": 4,
-      "feature_name": "fire_hydrant",
+      "feature_name": "sphere",
       "density": 5000,
       "position": {
         "x": 80.0,
@@ -367,7 +365,7 @@
     {
       "row": 6,
       "col": 0,
-      "feature_name": "bollard",
+      "feature_name": "stepped_pyramid",
       "density": 10,
       "position": {
         "x": 0.0,
@@ -378,7 +376,7 @@
     {
       "row": 6,
       "col": 1,
-      "feature_name": "bollard",
+      "feature_name": "stepped_pyramid",
       "density": 50,
       "position": {
         "x": 20.0,
@@ -389,7 +387,7 @@
     {
       "row": 6,
       "col": 2,
-      "feature_name": "bollard",
+      "feature_name": "stepped_pyramid",
       "density": 200,
       "position": {
         "x": 40.0,
@@ -400,7 +398,7 @@
     {
       "row": 6,
       "col": 3,
-      "feature_name": "bollard",
+      "feature_name": "stepped_pyramid",
       "density": 1000,
       "position": {
         "x": 60.0,
@@ -411,7 +409,7 @@
     {
       "row": 6,
       "col": 4,
-      "feature_name": "bollard",
+      "feature_name": "stepped_pyramid",
       "density": 5000,
       "position": {
         "x": 80.0,
@@ -422,7 +420,7 @@
     {
       "row": 7,
       "col": 0,
-      "feature_name": "manhole",
+      "feature_name": "hexagon",
       "density": 10,
       "position": {
         "x": 0.0,
@@ -433,7 +431,7 @@
     {
       "row": 7,
       "col": 1,
-      "feature_name": "manhole",
+      "feature_name": "hexagon",
       "density": 50,
       "position": {
         "x": 20.0,
@@ -444,7 +442,7 @@
     {
       "row": 7,
       "col": 2,
-      "feature_name": "manhole",
+      "feature_name": "hexagon",
       "density": 200,
       "position": {
         "x": 40.0,
@@ -455,7 +453,7 @@
     {
       "row": 7,
       "col": 3,
-      "feature_name": "manhole",
+      "feature_name": "hexagon",
       "density": 1000,
       "position": {
         "x": 60.0,
@@ -466,7 +464,7 @@
     {
       "row": 7,
       "col": 4,
-      "feature_name": "manhole",
+      "feature_name": "hexagon",
       "density": 5000,
       "position": {
         "x": 80.0,
@@ -477,7 +475,7 @@
     {
       "row": 8,
       "col": 0,
-      "feature_name": "bench",
+      "feature_name": "cross",
       "density": 10,
       "position": {
         "x": 0.0,
@@ -488,7 +486,7 @@
     {
       "row": 8,
       "col": 1,
-      "feature_name": "bench",
+      "feature_name": "cross",
       "density": 50,
       "position": {
         "x": 20.0,
@@ -499,7 +497,7 @@
     {
       "row": 8,
       "col": 2,
-      "feature_name": "bench",
+      "feature_name": "cross",
       "density": 200,
       "position": {
         "x": 40.0,
@@ -510,7 +508,7 @@
     {
       "row": 8,
       "col": 3,
-      "feature_name": "bench",
+      "feature_name": "cross",
       "density": 1000,
       "position": {
         "x": 60.0,
@@ -521,7 +519,7 @@
     {
       "row": 8,
       "col": 4,
-      "feature_name": "bench",
+      "feature_name": "cross",
       "density": 5000,
       "position": {
         "x": 80.0,
@@ -532,7 +530,7 @@
     {
       "row": 9,
       "col": 0,
-      "feature_name": "tree",
+      "feature_name": "fire_hydrant",
       "density": 10,
       "position": {
         "x": 0.0,
@@ -543,7 +541,7 @@
     {
       "row": 9,
       "col": 1,
-      "feature_name": "tree",
+      "feature_name": "fire_hydrant",
       "density": 50,
       "position": {
         "x": 20.0,
@@ -554,7 +552,7 @@
     {
       "row": 9,
       "col": 2,
-      "feature_name": "tree",
+      "feature_name": "fire_hydrant",
       "density": 200,
       "position": {
         "x": 40.0,
@@ -565,7 +563,7 @@
     {
       "row": 9,
       "col": 3,
-      "feature_name": "tree",
+      "feature_name": "fire_hydrant",
       "density": 1000,
       "position": {
         "x": 60.0,
@@ -576,7 +574,7 @@
     {
       "row": 9,
       "col": 4,
-      "feature_name": "tree",
+      "feature_name": "fire_hydrant",
       "density": 5000,
       "position": {
         "x": 80.0,
@@ -642,7 +640,7 @@
     {
       "row": 11,
       "col": 0,
-      "feature_name": "stop_sign",
+      "feature_name": "stairs",
       "density": 10,
       "position": {
         "x": 0.0,
@@ -653,7 +651,7 @@
     {
       "row": 11,
       "col": 1,
-      "feature_name": "stop_sign",
+      "feature_name": "stairs",
       "density": 50,
       "position": {
         "x": 20.0,
@@ -664,7 +662,7 @@
     {
       "row": 11,
       "col": 2,
-      "feature_name": "stop_sign",
+      "feature_name": "stairs",
       "density": 200,
       "position": {
         "x": 40.0,
@@ -675,7 +673,7 @@
     {
       "row": 11,
       "col": 3,
-      "feature_name": "stop_sign",
+      "feature_name": "stairs",
       "density": 1000,
       "position": {
         "x": 60.0,
@@ -686,7 +684,7 @@
     {
       "row": 11,
       "col": 4,
-      "feature_name": "stop_sign",
+      "feature_name": "stairs",
       "density": 5000,
       "position": {
         "x": 80.0,
@@ -697,7 +695,7 @@
     {
       "row": 12,
       "col": 0,
-      "feature_name": "mailbox_cluster",
+      "feature_name": "utility_box",
       "density": 10,
       "position": {
         "x": 0.0,
@@ -708,7 +706,7 @@
     {
       "row": 12,
       "col": 1,
-      "feature_name": "mailbox_cluster",
+      "feature_name": "utility_box",
       "density": 50,
       "position": {
         "x": 20.0,
@@ -719,7 +717,7 @@
     {
       "row": 12,
       "col": 2,
-      "feature_name": "mailbox_cluster",
+      "feature_name": "utility_box",
       "density": 200,
       "position": {
         "x": 40.0,
@@ -730,7 +728,7 @@
     {
       "row": 12,
       "col": 3,
-      "feature_name": "mailbox_cluster",
+      "feature_name": "utility_box",
       "density": 1000,
       "position": {
         "x": 60.0,
@@ -741,7 +739,7 @@
     {
       "row": 12,
       "col": 4,
-      "feature_name": "mailbox_cluster",
+      "feature_name": "utility_box",
       "density": 5000,
       "position": {
         "x": 80.0,
@@ -752,7 +750,7 @@
     {
       "row": 13,
       "col": 0,
-      "feature_name": "bike_rack",
+      "feature_name": "tree",
       "density": 10,
       "position": {
         "x": 0.0,
@@ -763,7 +761,7 @@
     {
       "row": 13,
       "col": 1,
-      "feature_name": "bike_rack",
+      "feature_name": "tree",
       "density": 50,
       "position": {
         "x": 20.0,
@@ -774,7 +772,7 @@
     {
       "row": 13,
       "col": 2,
-      "feature_name": "bike_rack",
+      "feature_name": "tree",
       "density": 200,
       "position": {
         "x": 40.0,
@@ -785,7 +783,7 @@
     {
       "row": 13,
       "col": 3,
-      "feature_name": "bike_rack",
+      "feature_name": "tree",
       "density": 1000,
       "position": {
         "x": 60.0,
@@ -796,7 +794,7 @@
     {
       "row": 13,
       "col": 4,
-      "feature_name": "bike_rack",
+      "feature_name": "tree",
       "density": 5000,
       "position": {
         "x": 80.0,
@@ -807,7 +805,7 @@
     {
       "row": 14,
       "col": 0,
-      "feature_name": "picnic_table",
+      "feature_name": "bench",
       "density": 10,
       "position": {
         "x": 0.0,
@@ -818,7 +816,7 @@
     {
       "row": 14,
       "col": 1,
-      "feature_name": "picnic_table",
+      "feature_name": "bench",
       "density": 50,
       "position": {
         "x": 20.0,
@@ -829,7 +827,7 @@
     {
       "row": 14,
       "col": 2,
-      "feature_name": "picnic_table",
+      "feature_name": "bench",
       "density": 200,
       "position": {
         "x": 40.0,
@@ -840,7 +838,7 @@
     {
       "row": 14,
       "col": 3,
-      "feature_name": "picnic_table",
+      "feature_name": "bench",
       "density": 1000,
       "position": {
         "x": 60.0,
@@ -851,7 +849,7 @@
     {
       "row": 14,
       "col": 4,
-      "feature_name": "picnic_table",
+      "feature_name": "bench",
       "density": 5000,
       "position": {
         "x": 80.0,
@@ -862,7 +860,7 @@
     {
       "row": 15,
       "col": 0,
-      "feature_name": "storm_inlet",
+      "feature_name": "stop_sign",
       "density": 10,
       "position": {
         "x": 0.0,
@@ -873,7 +871,7 @@
     {
       "row": 15,
       "col": 1,
-      "feature_name": "storm_inlet",
+      "feature_name": "stop_sign",
       "density": 50,
       "position": {
         "x": 20.0,
@@ -884,7 +882,7 @@
     {
       "row": 15,
       "col": 2,
-      "feature_name": "storm_inlet",
+      "feature_name": "stop_sign",
       "density": 200,
       "position": {
         "x": 40.0,
@@ -895,7 +893,7 @@
     {
       "row": 15,
       "col": 3,
-      "feature_name": "storm_inlet",
+      "feature_name": "stop_sign",
       "density": 1000,
       "position": {
         "x": 60.0,
@@ -906,7 +904,7 @@
     {
       "row": 15,
       "col": 4,
-      "feature_name": "storm_inlet",
+      "feature_name": "stop_sign",
       "density": 5000,
       "position": {
         "x": 80.0,
@@ -917,7 +915,7 @@
     {
       "row": 16,
       "col": 0,
-      "feature_name": "speed_hump",
+      "feature_name": "bike_rack",
       "density": 10,
       "position": {
         "x": 0.0,
@@ -928,7 +926,7 @@
     {
       "row": 16,
       "col": 1,
-      "feature_name": "speed_hump",
+      "feature_name": "bike_rack",
       "density": 50,
       "position": {
         "x": 20.0,
@@ -939,7 +937,7 @@
     {
       "row": 16,
       "col": 2,
-      "feature_name": "speed_hump",
+      "feature_name": "bike_rack",
       "density": 200,
       "position": {
         "x": 40.0,
@@ -950,7 +948,7 @@
     {
       "row": 16,
       "col": 3,
-      "feature_name": "speed_hump",
+      "feature_name": "bike_rack",
       "density": 1000,
       "position": {
         "x": 60.0,
@@ -961,7 +959,7 @@
     {
       "row": 16,
       "col": 4,
-      "feature_name": "speed_hump",
+      "feature_name": "bike_rack",
       "density": 5000,
       "position": {
         "x": 80.0,
@@ -972,7 +970,7 @@
     {
       "row": 17,
       "col": 0,
-      "feature_name": "stairs",
+      "feature_name": "picnic_table",
       "density": 10,
       "position": {
         "x": 0.0,
@@ -983,7 +981,7 @@
     {
       "row": 17,
       "col": 1,
-      "feature_name": "stairs",
+      "feature_name": "picnic_table",
       "density": 50,
       "position": {
         "x": 20.0,
@@ -994,7 +992,7 @@
     {
       "row": 17,
       "col": 2,
-      "feature_name": "stairs",
+      "feature_name": "picnic_table",
       "density": 200,
       "position": {
         "x": 40.0,
@@ -1005,7 +1003,7 @@
     {
       "row": 17,
       "col": 3,
-      "feature_name": "stairs",
+      "feature_name": "picnic_table",
       "density": 1000,
       "position": {
         "x": 60.0,
@@ -1016,7 +1014,7 @@
     {
       "row": 17,
       "col": 4,
-      "feature_name": "stairs",
+      "feature_name": "picnic_table",
       "density": 5000,
       "position": {
         "x": 80.0,
@@ -1027,7 +1025,7 @@
     {
       "row": 18,
       "col": 0,
-      "feature_name": "platform",
+      "feature_name": "l_shape",
       "density": 10,
       "position": {
         "x": 0.0,
@@ -1038,7 +1036,7 @@
     {
       "row": 18,
       "col": 1,
-      "feature_name": "platform",
+      "feature_name": "l_shape",
       "density": 50,
       "position": {
         "x": 20.0,
@@ -1049,7 +1047,7 @@
     {
       "row": 18,
       "col": 2,
-      "feature_name": "platform",
+      "feature_name": "l_shape",
       "density": 200,
       "position": {
         "x": 40.0,
@@ -1060,7 +1058,7 @@
     {
       "row": 18,
       "col": 3,
-      "feature_name": "platform",
+      "feature_name": "l_shape",
       "density": 1000,
       "position": {
         "x": 60.0,
@@ -1071,7 +1069,7 @@
     {
       "row": 18,
       "col": 4,
-      "feature_name": "platform",
+      "feature_name": "l_shape",
       "density": 5000,
       "position": {
         "x": 80.0,
@@ -1082,7 +1080,7 @@
     {
       "row": 19,
       "col": 0,
-      "feature_name": "column",
+      "feature_name": "multi_level",
       "density": 10,
       "position": {
         "x": 0.0,
@@ -1093,7 +1091,7 @@
     {
       "row": 19,
       "col": 1,
-      "feature_name": "column",
+      "feature_name": "multi_level",
       "density": 50,
       "position": {
         "x": 20.0,
@@ -1104,7 +1102,7 @@
     {
       "row": 19,
       "col": 2,
-      "feature_name": "column",
+      "feature_name": "multi_level",
       "density": 200,
       "position": {
         "x": 40.0,
@@ -1115,7 +1113,7 @@
     {
       "row": 19,
       "col": 3,
-      "feature_name": "column",
+      "feature_name": "multi_level",
       "density": 1000,
       "position": {
         "x": 60.0,
@@ -1126,7 +1124,7 @@
     {
       "row": 19,
       "col": 4,
-      "feature_name": "column",
+      "feature_name": "multi_level",
       "density": 5000,
       "position": {
         "x": 80.0,
@@ -1137,7 +1135,7 @@
     {
       "row": 20,
       "col": 0,
-      "feature_name": "l_shape",
+      "feature_name": "column",
       "density": 10,
       "position": {
         "x": 0.0,
@@ -1148,7 +1146,7 @@
     {
       "row": 20,
       "col": 1,
-      "feature_name": "l_shape",
+      "feature_name": "column",
       "density": 50,
       "position": {
         "x": 20.0,
@@ -1159,7 +1157,7 @@
     {
       "row": 20,
       "col": 2,
-      "feature_name": "l_shape",
+      "feature_name": "column",
       "density": 200,
       "position": {
         "x": 40.0,
@@ -1170,7 +1168,7 @@
     {
       "row": 20,
       "col": 3,
-      "feature_name": "l_shape",
+      "feature_name": "column",
       "density": 1000,
       "position": {
         "x": 60.0,
@@ -1181,7 +1179,7 @@
     {
       "row": 20,
       "col": 4,
-      "feature_name": "l_shape",
+      "feature_name": "column",
       "density": 5000,
       "position": {
         "x": 80.0,
@@ -1241,120 +1239,10 @@
       "position": {
         "x": 80.0,
         "y": 420.0,
-        "z": 0.0
-      }
-    },
-    {
-      "row": 22,
-      "col": 0,
-      "feature_name": "circular_platform",
-      "density": 10,
-      "position": {
-        "x": 0.0,
-        "y": 440.0,
-        "z": 0.0
-      }
-    },
-    {
-      "row": 22,
-      "col": 1,
-      "feature_name": "circular_platform",
-      "density": 50,
-      "position": {
-        "x": 20.0,
-        "y": 440.0,
-        "z": 0.0
-      }
-    },
-    {
-      "row": 22,
-      "col": 2,
-      "feature_name": "circular_platform",
-      "density": 200,
-      "position": {
-        "x": 40.0,
-        "y": 440.0,
-        "z": 0.0
-      }
-    },
-    {
-      "row": 22,
-      "col": 3,
-      "feature_name": "circular_platform",
-      "density": 1000,
-      "position": {
-        "x": 60.0,
-        "y": 440.0,
-        "z": 0.0
-      }
-    },
-    {
-      "row": 22,
-      "col": 4,
-      "feature_name": "circular_platform",
-      "density": 5000,
-      "position": {
-        "x": 80.0,
-        "y": 440.0,
-        "z": 0.0
-      }
-    },
-    {
-      "row": 23,
-      "col": 0,
-      "feature_name": "multi_level",
-      "density": 10,
-      "position": {
-        "x": 0.0,
-        "y": 460.0,
-        "z": 0.0
-      }
-    },
-    {
-      "row": 23,
-      "col": 1,
-      "feature_name": "multi_level",
-      "density": 50,
-      "position": {
-        "x": 20.0,
-        "y": 460.0,
-        "z": 0.0
-      }
-    },
-    {
-      "row": 23,
-      "col": 2,
-      "feature_name": "multi_level",
-      "density": 200,
-      "position": {
-        "x": 40.0,
-        "y": 460.0,
-        "z": 0.0
-      }
-    },
-    {
-      "row": 23,
-      "col": 3,
-      "feature_name": "multi_level",
-      "density": 1000,
-      "position": {
-        "x": 60.0,
-        "y": 460.0,
-        "z": 0.0
-      }
-    },
-    {
-      "row": 23,
-      "col": 4,
-      "feature_name": "multi_level",
-      "density": 5000,
-      "position": {
-        "x": 80.0,
-        "y": 460.0,
         "z": 0.0
       }
     }
   ],
-  "total_points": 1768863,
-  "generation_time": "2025-09-09 17:35:15"
+  "total_points": 6599551,
+  "generation_time": "2025-09-10 15:29:38"
 }
