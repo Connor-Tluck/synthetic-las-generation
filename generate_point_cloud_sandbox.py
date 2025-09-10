@@ -92,8 +92,9 @@ CLASS = {
 # -----------------------------
 
 def make_grid(nx, ny, spacing):
-    xs = np.arange(nx) * spacing
-    ys = np.arange(ny) * spacing
+    # Create grid that covers the full area
+    xs = np.linspace(0, (nx-1)*spacing, nx)
+    ys = np.linspace(0, (ny-1)*spacing, ny)
     gx, gy = np.meshgrid(xs, ys, indexing="xy")
     return gx.ravel(), gy.ravel()
 
@@ -173,13 +174,16 @@ def attach_rgb(d, mat_key):
 # -----------------------------
 
 def make_plane(area_w, area_h, z0, mat_key, cls, spacing=BASE_SPACING, slope=(0.0, 0.0)):
+    # Calculate number of points based on desired density
     nx = max(1, int(area_w / spacing))
     ny = max(1, int(area_h / spacing))
-    gx, gy = make_grid(nx, ny, spacing)
     
-    # Center the plane at origin
-    gx = gx - area_w / 2
-    gy = gy - area_h / 2
+    # Create grid that properly covers the area
+    xs = np.linspace(-area_w/2, area_w/2, nx)
+    ys = np.linspace(-area_h/2, area_h/2, ny)
+    gx, gy = np.meshgrid(xs, ys, indexing="xy")
+    gx = gx.ravel()
+    gy = gy.ravel()
     
     gx = jitter(gx, XY_JITTER)
     gy = jitter(gy, XY_JITTER)
@@ -351,10 +355,9 @@ def make_bench(base_z, spacing=BASE_SPACING):
 def make_tree(base_z, spacing=BASE_SPACING):
     trunk = make_cylinder(0.15, 3.5, base_z, "wood", "high_veg", spacing)
     crown_rad = 1.5
-    n = max(800, int(4.0 * math.pi * crown_rad ** 2 * 20))
-
-    # correct the above line, Python needs math.pi, keeping a comment to highlight
-    n = max(800, int(4.0 * math.pi * crown_rad**2 * 20))
+    # Calculate number of points based on spacing for consistent density
+    crown_area = math.pi * crown_rad**2
+    n = max(100, int(crown_area / (spacing**2)))
     phi = RNG.uniform(0, 2.0 * math.pi, n)
     costheta = RNG.uniform(-1.0, 1.0, n)
     u = RNG.uniform(0.7, 1.0, n)
@@ -396,9 +399,9 @@ def make_parking_bumpers(count, base_z, spacing=BASE_SPACING):
     return stack_fields(parts)
 
 def make_speed_hump(width, length, height, base_z, spacing=BASE_SPACING):
-    nx = max(1, int(length / BASE_SPACING))
-    ny = max(1, int(width / BASE_SPACING))
-    gx, gy = make_grid(nx, ny, BASE_SPACING)
+    nx = max(1, int(length / spacing))
+    ny = max(1, int(width / spacing))
+    gx, gy = make_grid(nx, ny, spacing)
     gx = jitter(gx, XY_JITTER)
     gy = jitter(gy, XY_JITTER)
     zy = height * 0.5 * (1.0 - np.cos(np.clip(gy / width, 0, 1) * math.pi))
@@ -439,9 +442,9 @@ def make_bollards(n, base_z, spacing=BASE_SPACING):
     return stack_fields(parts)
 
 def make_driveway_crown(width, length, crown_h, base_z, spacing=BASE_SPACING):
-    nx = max(1, int(length / BASE_SPACING))
-    ny = max(1, int(width / BASE_SPACING))
-    gx, gy = make_grid(nx, ny, BASE_SPACING)
+    nx = max(1, int(length / spacing))
+    ny = max(1, int(width / spacing))
+    gx, gy = make_grid(nx, ny, spacing)
     gx = jitter(gx, XY_JITTER)
     gy = jitter(gy, XY_JITTER)
     center = width * 0.5
