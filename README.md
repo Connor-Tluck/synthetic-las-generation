@@ -4,7 +4,9 @@ A Python toolkit for generating synthetic LiDAR point cloud data in LAS/LAZ form
 
 ![Synthetic LAS Generation](images/synthetic_las.jpg)
 
-![Density Test Grid](images/density_grid.jpg)
+![Density Test Grid](images/density_grid-2.jpg)
+
+*Density Test Grid showing 24 different objects across 5 density levels (10, 50, 200, 1000, 5000 points/m²). Each column demonstrates how different point cloud densities affect the visual appearance and detail level of the same objects, making it perfect for testing CAD tools and algorithms across various data densities.*
 
 ## Features
 
@@ -29,7 +31,7 @@ A Python toolkit for generating synthetic LiDAR point cloud data in LAS/LAZ form
 
 ### Density Test Grid System
 - **CAD-Focused Objects**: 24 specialized objects for drawing functionality testing
-- **Multi-Density Testing**: 5 density levels (50, 100, 400, 1000, 5000 points/m²)
+- **Multi-Density Testing**: 5 density levels (10, 50, 200, 1000, 5000 points/m²)
 - **Clean Geometries**: Well-defined, individual objects without artifacts
 - **Human-Readable Labels**: Numerical density labels for easy identification
 - **Staircase Examples**: Perfect for testing drape tools and line drawing
