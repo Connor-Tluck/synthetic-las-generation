@@ -1,8 +1,0 @@
-{
-  "scene_type": "hollywood_text",
-  "timestamp": 1757553333,
-  "total_points": 109440,
-  "letter_density": 400,
-  "z_offset": 0.0,
-  "description": "Hollywood sign text using segment-based approach like density test grid"
-}
