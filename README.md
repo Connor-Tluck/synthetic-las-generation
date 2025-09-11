@@ -14,6 +14,10 @@ A Python toolkit for generating synthetic LiDAR point cloud data in LAS/LAZ form
 
 *Density Test Grid showing 24 different objects across 5 density levels (10, 50, 200, 1000, 5000 points/m²). Each column demonstrates how different point cloud densities affect the visual appearance and detail level of the same objects, making it perfect for testing CAD tools and algorithms across various data densities.*
 
+![Geometric Shapes Test](images/general_geometry.jpg)
+
+*Geometric Shapes Test showcasing 14 different 3D geometric primitives including spheres, cones, torus, helix, stepped pyramids, geodesic domes, and more. Each shape is generated with 5000 points/m² density and demonstrates the system's capability to create complex geometric forms for testing point cloud processing algorithms, 3D reconstruction, and geometric analysis applications.*
+
 ## Features
 
 ### Core Generation System
@@ -43,6 +47,14 @@ A Python toolkit for generating synthetic LiDAR point cloud data in LAS/LAZ form
 - **Staircase Examples**: Perfect for testing drape tools and line drawing
 - **Systematic Grid Layout**: Organized 24×5 grid for comprehensive testing
 - **CAD Tool Testing**: Designed for area measurements, angle detection, elevation analysis
+
+### Geometric Shapes Test System
+- **3D Geometric Primitives**: 14 different mathematical shapes including spheres, cones, torus, helix, stepped pyramids, geodesic domes, and more
+- **High-Density Generation**: 5000 points/m² for detailed geometric analysis
+- **Algorithm Testing**: Perfect for testing point cloud processing, 3D reconstruction, and geometric analysis algorithms
+- **Mathematical Precision**: Clean, well-defined geometric forms without artifacts
+- **Research Applications**: Ideal for computer vision, robotics, and 3D modeling research
+- **Individual Shape Files**: Each geometric primitive available as separate LAZ file for focused testing
 
 ## Generated Scenes
 
@@ -170,6 +182,21 @@ This will create:
 - Enhanced 3D preview with zoom controls
 - Output: `density_test_grid_output/enhanced_density_test_grid.laz`
 
+### Geometric Shapes Test
+
+Generate 14 different 3D geometric primitives for algorithm testing:
+
+```bash
+python generate_geometric_shapes_test.py
+```
+
+This will create:
+- 14 individual geometric shape files (sphere, cone, torus, helix, etc.)
+- High-density point clouds (5000 points/m²) for detailed analysis
+- Clean mathematical forms perfect for algorithm testing
+- Individual shape files in `geometric_shapes_output/individual_shapes/`
+- Combined file with all shapes: `geometric_shapes_output/geometric_shapes_test.laz`
+
 ### Configuration Options
 
 Edit the configuration section in `generate_point_cloud_sandbox.py`:
@@ -218,6 +245,19 @@ density_test_grid_output/
 ├── enhanced_density_test_grid.laz
 ├── enhanced_grid_metadata.json
 └── ...
+```
+
+### Geometric Shapes Test System
+```
+geometric_shapes_output/
+├── geometric_shapes_test.laz
+├── geometric_shapes_metadata.json
+└── individual_shapes/
+    ├── sphere_density_5000.laz
+    ├── cone_density_5000.laz
+    ├── torus_density_5000.laz
+    ├── helix_density_5000.laz
+    └── ... (14 total shapes)
 ```
 
 ## Point Cloud Properties
@@ -272,6 +312,9 @@ This synthetic data is ideal for:
 - **Education**: Teaching LiDAR concepts and processing
 - **Simulation**: Urban planning and infrastructure design
 - **Data Augmentation**: Enhancing real LiDAR datasets with synthetic variations
+- **Geometric Analysis**: Testing 3D reconstruction, shape recognition, and geometric algorithms
+- **Computer Vision**: Training and testing point cloud processing algorithms
+- **Robotics**: Testing SLAM, object detection, and navigation algorithms
 
 ## Technical Details
 
@@ -350,7 +393,8 @@ synthetic-las-generation/
 ├── density_test_grid_output/          # Density test grid output
 ├── images/                            # Project images
 │   ├── synthetic_las.jpg              # Main project image
-│   └── density_grid.jpg               # Density test grid image
+│   ├── density_grid-2.jpg             # Density test grid image
+│   └── general_geometry.jpg           # Geometric shapes test image
 ├── requirements.txt                   # Dependencies
 ├── README.md                          # This file
 └── large_scale_generation/            # Large-scale generation system
