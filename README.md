@@ -100,6 +100,25 @@ This will create:
 
 **Work in Progress** - Advanced scene generation system for creating realistic urban environments.
 
+## Digital Surveyor Integration
+
+![Digital Surveyor Upload Process](images/ds_upload.jpg)
+
+*Digital Surveyor Integration showing the upload process for synthetic LiDAR data to the platform.*
+
+Upload your generated synthetic data to Digital Surveyor for visualization and analysis:
+
+1. **Generate your data** using any of the generation scripts
+2. **Compress the files** (if needed) to reduce upload size
+3. **Upload as .las format** to the Digital Surveyor platform
+4. **View your data** - The platform will load your synthetic data near the Salt Flats origin for easy access and visualization
+
+This integration allows you to:
+- Visualize your synthetic point clouds in a professional web-based viewer
+- Share your generated data with team members
+- Analyze and compare different synthetic datasets
+- Use the platform's tools for point cloud processing and analysis
+
 ## Output Structure
 
 ```
