@@ -104,20 +104,18 @@ This will create:
 
 ![Digital Surveyor Upload Process](images/ds_upload.jpg)
 
-*Digital Surveyor Integration showing the upload process for synthetic LiDAR data to the platform.*
-
 Upload your generated synthetic data to Digital Surveyor for visualization and analysis:
 
-1. **Generate your data** using any of the generation scripts
-2. **Compress the files** (if needed) to reduce upload size
-3. **Upload as .las format** to the Digital Surveyor platform
-4. **View your data** - The platform will load your synthetic data near the Salt Flats origin for easy access and visualization
+1. Generate your data using any generation script
+2. Upload as .las format to the platform
+3. View your data near the Salt Flats origin
 
-This integration allows you to:
-- Visualize your synthetic point clouds in a professional web-based viewer
-- Share your generated data with team members
-- Analyze and compare different synthetic datasets
-- Use the platform's tools for point cloud processing and analysis
+## Sample Data on Digital Surveyor
+
+View example synthetic data on the Digital Surveyor platform:
+
+- **[Digital Surveyor Synthetic Data](https://cloud.mach9.io/files/292ba8aa-2a66-4963-b1e5-c473f0cddee8)** - Complete synthetic urban scenes
+- **[Digital Surveyor Geometric Shape Data](https://cloud.mach9.io/files/6e544768-a3f4-4f6f-9073-c206493e7016)** - 3D geometric primitives
 
 ## Output Structure
 
