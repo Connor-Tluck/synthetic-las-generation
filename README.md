@@ -2,7 +2,13 @@
 
 A Python toolkit for generating synthetic LiDAR point cloud data in LAS/LAZ format. This project creates realistic 3D scenes with various urban infrastructure elements for testing, training, and development purposes.
 
+![Project Title](images/Title.jpg)
+
+*Project title image showcasing the Synthetic LAS Generation toolkit for creating realistic LiDAR point cloud data.*
+
 ![Synthetic LAS Generation](images/synthetic_las.jpg)
+
+*Main project visualization showing the comprehensive synthetic LiDAR point cloud generation system with various urban infrastructure elements.*
 
 ![Density Test Grid](images/density_grid-2.jpg)
 
