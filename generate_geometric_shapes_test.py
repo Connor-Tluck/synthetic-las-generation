@@ -32,9 +32,11 @@ from generate_point_cloud_sandbox import (
 # Configuration
 # -----------------------------
 OUT_DIR = Path("geometric_shapes_output")
+INDIVIDUAL_SHAPES_DIR = OUT_DIR / "individual_shapes"
 WRITE_LAZ = True
 SHOW_PREVIEW = True
 ADD_RGB = True
+WRITE_INDIVIDUAL_SHAPES = True
 
 # High density configuration for detailed geometric testing
 DENSITY_LEVELS = [5000]  # Single high density level for all shapes
@@ -402,6 +404,42 @@ def make_feature_with_density(feature_func, density):
     spacing = get_spacing_for_density(density)
     return feature_func(spacing=spacing)
 
+def write_individual_shape(shape_data, shape_name, density, timestamp):
+    """Write an individual shape to its own .laz file."""
+    if not WRITE_INDIVIDUAL_SHAPES:
+        return
+    
+    # Create LAS file for individual shape
+    header = laspy.LasHeader(point_format=3, version="1.4")
+    header.scales = [0.001, 0.001, 0.001]
+    header.offsets = [0.0, 0.0, 0.0]
+    las = laspy.LasData(header)
+    
+    las.x = shape_data["x"].astype(np.float64)
+    las.y = shape_data["y"].astype(np.float64)
+    las.z = shape_data["z"].astype(np.float64)
+    las.intensity = shape_data["intensity"].astype(np.uint16)
+    las.classification = shape_data["cls"].astype(np.uint8)
+    
+    if ADD_RGB and all(k in shape_data for k in ["red", "green", "blue"]):
+        las.red = shape_data["red"].astype(np.uint16)
+        las.green = shape_data["green"].astype(np.uint16)
+        las.blue = shape_data["blue"].astype(np.uint16)
+    
+    las.return_number = np.ones(shape_data["x"].size, dtype=np.uint8)
+    las.number_of_returns = np.ones(shape_data["x"].size, dtype=np.uint8)
+    
+    # Create filename
+    filename = f"{shape_name}_density_{density}_{timestamp}.laz"
+    output_file = INDIVIDUAL_SHAPES_DIR / filename
+    
+    if WRITE_LAZ:
+        las.write(output_file)
+    else:
+        las.write(str(output_file).replace('.laz', '.las'))
+    
+    print(f"  Saved individual shape: {filename} ({len(shape_data['x']):,} points)")
+
 # -----------------------------
 # Main generation function
 # -----------------------------
@@ -411,8 +449,10 @@ def generate_geometric_shapes_test():
     print("Generating Geometric Shapes Test Grid")
     print("=" * 50)
     
-    # Create output directory
+    # Create output directories
     OUT_DIR.mkdir(exist_ok=True)
+    if WRITE_INDIVIDUAL_SHAPES:
+        INDIVIDUAL_SHAPES_DIR.mkdir(exist_ok=True)
     
     # Build geometric shapes
     shapes = build_geometric_shapes()
@@ -421,6 +461,7 @@ def generate_geometric_shapes_test():
     # Generate grid
     all_scenes = []
     grid_metadata = []
+    timestamp = int(time.time())
     
     print(f"Generating geometric shapes test grid with {len(shapes)} shapes")
     
@@ -435,6 +476,9 @@ def generate_geometric_shapes_test():
             try:
                 scene_data = make_feature_with_density(shape_func, density)
                 scene_data = ensure_cls(scene_data)
+                
+                # Write individual shape file (before translation)
+                write_individual_shape(scene_data, shape_name, density, timestamp)
                 
                 # Translate to grid position with Z offset
                 scene_data = translate(scene_data, x, y, Z_OFFSET)
@@ -467,7 +511,6 @@ def generate_geometric_shapes_test():
     
     # Save point cloud
     print("Saving point cloud...")
-    timestamp = int(time.time())
     output_file = OUT_DIR / f"geometric_shapes_test_{timestamp}.laz"
     
     # Create LAS file
@@ -560,6 +603,9 @@ def generate_geometric_shapes_test():
     
     print("\nGeometric shapes test generation complete!")
     print(f"Output directory: {OUT_DIR}")
+    if WRITE_INDIVIDUAL_SHAPES:
+        print(f"Individual shapes directory: {INDIVIDUAL_SHAPES_DIR}")
+        print(f"Individual shape files: {len(shapes)} files created")
 
 if __name__ == "__main__":
     generate_geometric_shapes_test()

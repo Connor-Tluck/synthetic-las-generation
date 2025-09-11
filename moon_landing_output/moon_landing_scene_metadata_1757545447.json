@@ -1,0 +1,26 @@
+{
+  "scene_name": "moon_landing_scene",
+  "timestamp": 1757545447,
+  "total_points": 1926212,
+  "moon_surface_size": 30.0,
+  "lander_scale": 0.8,
+  "astronaut_scale": 0.6,
+  "flag_scale": 0.7,
+  "camera_scale": 0.5,
+  "moon_density": 2000,
+  "object_density": 5000,
+  "detail_density": 8000,
+  "elements": [
+    "Moon surface with realistic craters and varied colors",
+    "Apollo-style lunar lander with antennas and thrusters",
+    "Astronaut in spacesuit",
+    "American flag on pole with rippled fabric",
+    "Video camera on tripod",
+    "Astronaut footprints and equipment marks",
+    "Equipment bag/tool kit near lander",
+    "Scattered rocks and debris around landing site",
+    "Lander ladder from surface to cabin",
+    "Rocket engine burn marks on moon surface"
+  ],
+  "description": "Point cloud representation of the iconic Apollo 11 moon landing scene"
+}
